@@ -9,7 +9,15 @@ body{
     margin: 0;
     padding: 0;
     position: relative;
-    background-color: rgb(200, 211, 189);
+    /* background-color: rgb(200, 211, 189); */
+    /* background-color: #000000; */
+        background: linear-gradient(
+        to bottom,
+        rgb(200, 211, 189) 0%,
+        rgb(200, 211, 189) 75%,
+        #000000 75%,
+        #000000 100%
+    );
 }
 .header{
     
@@ -78,7 +86,6 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     padding: 60px 7%;
     box-sizing: border-box;
 }
@@ -180,10 +187,15 @@ body{
     overflow: hidden;
 
     flex-shrink: 0;
+
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    
 }
 
+
 .exercicio-card:hover{
-    transform: scale(1.01);
+    transform: translateX(8px);
+    box-shadow: -12px 0px 0px  #5bd27f;
 }
 
 
