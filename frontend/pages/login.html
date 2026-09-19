@@ -1,31 +1,82 @@
 <!DOCTYPE html>
-<html lang="PT-BR">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="../css/login.css">
-    <title>Login</title>
-    <link rel="icon" type="image/x-icon" href="../assets/images/logo/ReabSYS_iconeBranco.png">
+
+    <link rel="icon" type="image/png"
+        href="../assets/images/logo/ReabSYS_iconeBranco.png">
+
+    <title>Login | ReabSYS</title>
 </head>
 
 <body>
+
     <main>
         <section class="login-section">
+
             <div class="login-div">
+
                 <div class="logoReabSYS">
-                    <img src="../assets/images/logo/logo_ReabSYS_inteiraVerde.png" alt="logoReabSYS">
+                    <img src="../assets/images/logo/logo_ReabSYS_inteiraVerde.png"
+                        alt="Logo ReabSYS">
                 </div>
+
                 <h1>Entrar</h1>
+
                 <form>
+
                     <div class="campo">
-                        <label for="CREFITO">CREFITO</label>
-                        <input type="text" id="CREFITO">
+                        <label for="CREFITO">CREFITO *</label>
+
+                        <input
+                            type="text"
+                            id="CREFITO"
+                            name="CREFITO"
+                            placeholder="Digite seu CREFITO"
+                            required>
                     </div>
+
+                    <div class="campo">
+                        <label for="senha">Senha *</label>
+
+                        <input
+                            type="password"
+                            id="senha"
+                            name="senha"
+                            placeholder="Digite sua senha"
+                            required>
+                    </div>
+
+                    <button type="submit">
+                        Entrar
+                    </button>
+
                 </form>
+
+                <p class="cadastro">
+                    Não tem uma conta?
+                    <a href="#">Cadastre-se</a>
+                </p>
+
             </div>
+
         </section>
     </main>
+
+    <footer>
+        <div class="footerBottom">
+            <p>© 2026 ReabSYS - Todos os direitos reservados</p>
+
+            <div class="footerLegal">
+                <a href="">Termos de Uso</a>
+                <a href="">Política de Privacidade</a>
+            </div>
+        </div>
+    </footer>
 
 </body>
 
