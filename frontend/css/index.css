@@ -9,12 +9,12 @@ body{
     margin: 0;
     padding: 0;
     position: relative;
-    background-color: rgb(233, 245, 220);
+    background-color: rgb(200, 211, 189);
 }
 .header{
     
     width: 100%;
-    min-height: 10vh;
+    min-height: 10vh;   
     background-color: #349469;
 }
 #logoReabSYS{
@@ -23,12 +23,15 @@ body{
 }
 .navHeader{
     width: 100%;
-    height: 100px;
+    height: 80px;
     display: flex;
     align-items: center;
 }
 .navLogo{
-    margin-left: 7%;
+    margin-left: 4%;
+}
+.navLogo:hover{
+    cursor: pointer;
 }
 .navLinks{
     display: flex;
@@ -38,7 +41,7 @@ body{
 .navConta{
     align-items: center;
     display: flex;
-    gap: 50px;
+    gap: 30px;
     margin-left: auto;
     margin-right: 5%;
 }
@@ -48,18 +51,340 @@ body{
     text-decoration: none;
     font-size: 18px;
 }
+.navLinks a:hover,
+.navConta a:hover{
+    transform: scale(1.05);
+}
 
 #Entrar{
-    font-size: 16px;
+    font-size: 18px;
     border: 1px solid rgba(0, 0, 0, 0.247);
     font-family: 'Poppins', sans-serif;
     cursor: pointer;
     border-radius: 30px;
-    width: 130px;
+    width: 150px;
     height: 50px;
     background-color: rgb(255, 255, 255);
     transition: 0.2s;
 }
 #Entrar:hover{
     transform: scale(1.05);
+}
+
+.hero {
+    width: 100%;
+    min-height: calc(100vh - 100px);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 60px 7%;
+    box-sizing: border-box;
+}
+
+.heroTexto {
+    width: 55%;
+}
+
+.heroTexto h1 {
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 1.2;
+    margin: 0 0 20px 0;
+}
+
+#acompanhamento {
+    background-color: #62eaa8;
+    border-radius: 12px;
+    padding: 0px 0px;
+}
+#fisioterapeutico{
+    background-color: #62eaa8;
+    border-radius: 12px;
+    padding: 0px 0px;
+}
+
+.heroTexto p {
+    font-size: 15px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 0 30px 0;
+}
+
+.btnComecar {
+    width: 250px;
+    height: 62px;
+
+    border: none;
+    border-radius: 50px;
+
+    background-color: #5bd486;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 23px;
+
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btnComecar:hover {
+    transform: scale(1.05);
+}
+
+.heroImagem {
+    width: 38%;
+}
+
+.heroImagem img {
+    width: 100%;
+    height: 380px;
+
+    object-fit: cover;
+    border-radius: 25px;
+    border: 2px solid #349469;
+
+    display: block;
+}
+
+.exercicios-section {
+    width: 100%;
+    padding: 70px 0;
+    background-color: #ffffff;
+    border-radius: 30px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+
+.exercicios-container {
+    width: 100%;
+    max-width: 1550px;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 70px;
+    box-sizing: border-box;
+}
+
+
+.exercicio-card {
+    position: relative;
+
+    width: 220px;
+    height: 440px;
+
+    border-radius: 65px;
+    overflow: hidden;
+
+    flex-shrink: 0;
+}
+
+.exercicio-card:hover{
+    transform: scale(1.01);
+}
+
+
+
+
+.exercicio-card img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    display: block;
+}
+
+
+
+.exercicio-info {
+    position: absolute;
+
+    left: 20px;
+    bottom: 32px;
+
+    width: 250px;
+    min-height: 135px;
+
+    padding: 24px 30px;
+
+    box-sizing: border-box;
+
+    background-color: #5bd27f;
+
+    border-radius: 35px;
+
+    color: #ffffff;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+
+.exercicio-info p {
+    margin: 0;
+
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.1;
+}
+
+
+
+.exercicio-info h3 {
+    margin: 0;
+
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 1.1;
+}
+
+
+
+.exercicio-info p {
+    margin: 2px 0 0;
+
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.1;
+}
+
+#monitoramento{
+    margin-right: 100;
+    padding-left: 7px;
+}
+
+
+
+
+@media (max-width: 1200px) {
+
+    .exercicios-container {
+        justify-content: center;
+        gap: 35px;
+        flex-wrap: wrap;
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .exercicios-section {
+        padding: 50px 20px;
+    }
+
+    .exercicios-container {
+        padding: 0;
+        gap: 30px;
+    }
+
+    .exercicio-card {
+        width: 290px;
+        height: 430px;
+    }
+
+}
+
+
+.footer {
+    width: 100%;
+    background-color: #000000;
+    color: white;
+    box-sizing: border-box;
+}
+
+
+.footerContainer {
+    width: 98%;
+    margin: 0 auto;
+
+    min-height: 210px;
+
+    display: grid;
+    grid-template-columns: 2fr 1.3fr 1.5fr 1.5fr;
+    align-items: start;
+
+    padding-top: 35px;
+    padding-bottom: 30px;
+    box-sizing: border-box;
+}
+
+
+.footerBrand {
+    display: flex;
+    align-items: flex-start;
+}
+
+#logoFooter {
+    width: 220px;
+    height: auto;
+    display: block;
+}
+
+
+.footerColumn {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footerColumn h3 {
+    margin: 0 0 5px 0;
+
+    color: #5bd486;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.footerColumn a {
+    color: white;
+    text-decoration: none;
+
+    font-size: 16px;
+    font-weight: 400;
+
+    transition: 0.2s;
+}
+
+.footerColumn a:hover {
+    color: #5bd486;
+    transform: translateX(3px);
+}
+
+
+.footerBottom {
+    width: 94%;
+    margin: 0 auto;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.7);
+
+    min-height: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footerBottom p {
+    margin: 0;
+
+    font-size: 15px;
+}
+
+.footerLegal {
+    display: flex;
+    gap: 30px;
+}
+
+.footerLegal a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footerLegal a:hover {
+    color: #5bd486;
 }
