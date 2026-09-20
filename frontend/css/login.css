@@ -9,17 +9,10 @@ body {
 * {
     box-sizing: border-box;
 }
-
-
-
-
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: rgb(200, 211, 189);
+    background-color: #c8d3bd;
 }
-
-
-
 
 
 .login-section {
@@ -33,7 +26,6 @@ body {
 }
 
 
-
 .login-div {
     width: 400px;
 
@@ -45,6 +37,7 @@ body {
 
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
+
 
 
 .logoReabSYS {
@@ -71,6 +64,7 @@ h1 {
 
     color: #173c3c;
 }
+
 
 
 .campo {
@@ -182,21 +176,28 @@ button:hover {
 
 .footerBottom p {
     margin: 0;
-
     font-size: 15px;
+}
+
+.footerLinks {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.footerBottom a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 14px;
+
+    transition: color 0.2s;
+}
+
+.footerBottom a:hover {
+    color: #39a25e;
 }
 
 .footerLegal {
     display: flex;
     gap: 30px;
-}
-
-.footerLegal a {
-    color: rgb(0, 0, 0);
-    text-decoration: none;
-    font-size: 14px;
-}
-
-.footerLegal a:hover {
-    color: #39a25e;
 }
