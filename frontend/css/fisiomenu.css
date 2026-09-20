@@ -102,3 +102,357 @@ body {
 
     margin-bottom: 10px;
 }
+
+.main-content {
+    margin-left: 47px;
+
+    min-height: 100vh;
+
+    padding: 17px 30px 12px 34px;
+}
+
+
+.dashboard-header {
+    height: 61px;
+
+    display: flex;
+    align-items: flex-start;
+}
+
+.dashboard-header h1 {
+    font-size: 24px;
+    line-height: 1.2;
+
+    font-weight: 500;
+
+    margin-bottom: 2px;
+}
+
+.dashboard-header p {
+    font-size: 13px;
+    color: #444;
+
+    font-weight: 400;
+}
+
+
+.dashboard-grid {
+    display: grid;
+
+    grid-template-columns:
+        minmax(300px, 1.05fr)
+        minmax(300px, 1fr)
+        minmax(220px, 0.68fr);
+
+    gap: 16px;
+
+    height: calc(100vh - 90px);
+}
+
+
+
+.left-column,
+.center-column,
+.right-column {
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 9px;
+}
+
+
+
+.panel,
+.summary-card {
+    background: #fff;
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 2px 7px rgba(0, 0, 0, 0.22);
+}
+
+
+
+.summary-card {
+    height: 125px;
+
+    padding: 15px 18px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 18px;
+}
+
+.stat-card {
+    position: relative;
+
+    background: #fff;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 3px 8px rgba(0, 0, 0, 0.18);
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    padding: 45px 10px 7px 12px;
+}
+
+.stat-icon {
+    position: absolute;
+
+    top: 12px;
+    left: 50%;
+
+    transform: translateX(-50%);
+}
+
+.stat-icon svg {
+    width: 32px;
+    height: 32px;
+
+    stroke-width: 1.7;
+}
+
+.stat-number {
+    font-size: 17px;
+    font-weight: 600;
+
+    line-height: 1;
+}
+
+.stat-label {
+    font-size: 10px;
+
+    white-space: nowrap;
+
+    margin-top: 2px;
+}
+
+
+
+.panel-title,
+.panel h2 {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+
+
+.attention-panel {
+    flex: 1;
+
+    padding: 10px 15px 14px;
+}
+
+.attention-panel .panel-title {
+    margin-bottom: 8px;
+}
+
+.patient-list {
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+.patient-item {
+    height: 41px;
+
+    background: #fff;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 3px 7px rgba(0, 0, 0, 0.17);
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 12px;
+
+    transition: transform 0.2s ease;
+}
+
+.patient-item:hover {
+    transform: translateX(3px);
+}
+
+.status-dot {
+    width: 11px;
+    height: 11px;
+
+    border-radius: 50%;
+
+    flex-shrink: 0;
+
+    margin-right: 12px;
+}
+
+.status-dot.red {
+    background: #ff1515;
+}
+
+.status-dot.yellow {
+    background: #ffc400;
+}
+
+.status-dot.orange {
+    background: #ff9700;
+}
+
+.patient-info {
+    display: flex;
+    flex-direction: column;
+
+    min-width: 0;
+}
+
+.patient-info strong {
+    font-size: 12px;
+    font-weight: 600;
+
+    line-height: 14px;
+}
+
+.patient-info span {
+    font-size: 10px;
+    color: #444;
+
+    line-height: 12px;
+}
+
+.arrow {
+    margin-left: auto;
+
+    color: #999;
+
+    font-size: 12px;
+}
+
+
+.evolution-panel {
+    height: 188px;
+
+    padding: 10px 16px;
+}
+
+.evolution-panel h2 {
+    margin-bottom: 3px;
+}
+
+.evolution-content {
+    display: flex;
+    align-items: center;
+
+    height: calc(100% - 25px);
+}
+
+
+
+.circle-chart {
+    width: 112px;
+    height: 112px;
+
+    position: relative;
+
+    flex-shrink: 0;
+}
+
+.circle-chart svg {
+    width: 100%;
+    height: 100%;
+
+    transform: rotate(-90deg);
+}
+
+.circle-chart circle {
+    fill: none;
+
+    stroke-width: 5;
+}
+
+.circle-bg {
+    stroke: #e8e8e8;
+}
+
+.circle-progress {
+    stroke: #008c43;
+
+    stroke-linecap: round;
+
+    stroke-dasharray: 276.5;
+    stroke-dashoffset: 55.3;
+}
+
+.circle-chart span {
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    font-size: 23px;
+    font-weight: 600;
+}
+
+
+
+.progress-list {
+    flex: 1;
+
+    margin-left: 8px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 6px;
+}
+
+.progress-item {
+    width: 100%;
+}
+
+.progress-header {
+    display: flex;
+    justify-content: space-between;
+
+    font-size: 13px;
+
+    margin-bottom: 2px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 7px;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    background: #e4ebdf;
+}
+
+.progress {
+    height: 100%;
+}
+
+.progress.green {
+    background: #008d48;
+}
+
+.progress.yellow {
+    background: #ffae00;
+}
+
+.progress.red {
+    background: #ff4c4c;
+}
