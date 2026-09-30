@@ -124,7 +124,7 @@ body{
 }
 
 .btnComecar {
-    width: 250px;
+    width: 230px;
     height: 62px;
 
     border: none;
@@ -430,4 +430,185 @@ body{
 
 .footerLegal a:hover {
     color: #5bd486;
+}
+
+@media (max-width: 600px) {
+
+    .header {
+        min-height: auto;
+    }
+
+    .navHeader {
+        height: auto;
+        min-height: 70px;
+        padding: 10px 20px;
+        box-sizing: border-box;
+        flex-wrap: wrap;
+    }
+
+    .navLogo {
+        margin-left: 0;
+    }
+
+    #logoReabSYS {
+        width: 170px;
+        height: auto;
+    }
+
+    .navLinks {
+        width: 100%;
+        order: 3;
+        margin: 10px 0 5px 0;
+        gap: 20px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .navLinks a,
+    .navConta a {
+        font-size: 13px;
+    }
+
+    .navConta {
+        margin-left: auto;
+        margin-right: 0;
+        gap: 10px;
+    }
+
+    #Entrar {
+        width: 90px;
+        height: 38px;
+        font-size: 13px;
+    }
+
+    .hero {
+        width: 100%;
+        padding: 150px 25px 50px 25px;
+        flex-direction: column;
+        text-align: center;
+        gap: 35px;
+    }
+
+    .heroTexto {
+        width: 100%;
+    }
+
+    .heroTexto h1 {
+        font-size: 36px;
+        line-height: 1.2;
+        margin-bottom: 18px;
+    }
+
+    .heroTexto p {
+        font-size: 14px;
+        line-height: 1.6;
+        margin-bottom: 25px;
+    }
+
+    .btnComecar {
+        width: 190px;
+        height: 54px;
+        font-size: 18px;
+    }
+
+
+    .heroImagem {
+        width: 100%;
+        max-width: 450px;
+    }
+
+    .heroImagem img {
+        width: 100%;
+        height: 280px;
+        border-radius: 22px;
+    }
+
+    .heroImagem::after {
+        border-radius: 30px;
+    }
+
+    .exercicios-section {
+        padding: 50px 20px;
+        border-radius: 25px;
+    }
+
+    .exercicios-container {
+        width: 100%;
+        padding: 0;
+        gap: 35px;
+    }
+
+    .exercicio-card {
+        width: 280px;
+        height: 420px;
+    }
+
+    .exercicio-info {
+        left: 15px;
+        bottom: 25px;
+        width: calc(100% - 30px);
+        min-height: 120px;
+        padding: 20px 25px;
+        border-radius: 30px;
+    }
+
+    .exercicio-info h3 {
+        font-size: 22px;
+    }
+
+    .exercicio-info p {
+        font-size: 20px;
+    }
+
+    .footerContainer {
+        width: 90%;
+        grid-template-columns: 1fr;
+        gap: 35px;
+        padding-top: 35px;
+        padding-bottom: 30px;
+    }
+
+    .footerBrand {
+        justify-content: center;
+    }
+
+    #logoFooter {
+        width: 190px;
+    }
+
+    .footerColumn {
+        gap: 15px;
+        text-align: center;
+    }
+
+    .footerColumn h3 {
+        font-size: 15px;
+    }
+
+    .footerColumn a {
+        font-size: 14px;
+    }
+
+    .footerBottom {
+        width: 90%;
+        min-height: auto;
+        padding: 20px 0;
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .footerBottom p {
+        font-size: 13px;
+    }
+
+    .footerLegal {
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .footerLegal a {
+        font-size: 12px;
+    }
 }
