@@ -13,17 +13,18 @@ body{
     /* background-color: #000000; */
         background: linear-gradient(
         to bottom,
-        rgb(200, 211, 189) 0%,
+        rgb(254, 255, 252) 0%,
         rgb(200, 211, 189) 75%,
         #000000 75%,
         #000000 100%
     );
 }
 .header{
-    
+    position: fixed;
     width: 100%;
     min-height: 10vh;   
     background-color: #349469;
+    z-index: 1000;
 }
 #logoReabSYS{
     width: 300px;
@@ -81,12 +82,12 @@ body{
 
 .hero {
     width: 100%;
-    min-height: calc(100vh - 100px);
+    min-height: calc(100vh - 20px);
 
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 60px 7%;
+    padding: 90px 100px 10px 100px;
     box-sizing: border-box;
 }
 
@@ -95,21 +96,24 @@ body{
 }
 
 .heroTexto h1 {
-    font-size: 40px;
-    font-weight: 400;
+    font-size: 60px;
+    font-weight: 500;
     line-height: 1.2;
     margin: 0 0 20px 0;
 }
 
 #acompanhamento {
-    background-color: #62eaa8;
-    border-radius: 12px;
-    padding: 0px 0px;
+    background: linear-gradient(to right, #349469, #62eaa8);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    
 }
 #fisioterapeutico{
-    background-color: #62eaa8;
-    border-radius: 12px;
-    padding: 0px 0px;
+    background: linear-gradient(to right, #62eaa8, #349469);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
 }
 
 .heroTexto p {
@@ -126,7 +130,7 @@ body{
     border: none;
     border-radius: 50px;
 
-    background-color: #5bd486;
+    background:linear-gradient(30deg, #62eaa8 50%,  #349469 100%);
 
     font-family: 'Poppins', sans-serif;
     font-size: 23px;
@@ -140,17 +144,44 @@ body{
 }
 
 .heroImagem {
+    position: relative;
     width: 38%;
+}
+
+.heroImagem::after {
+    content: "";
+    position: absolute;
+
+    top: -8px;
+    left: -8px;
+    right: -8px;
+    bottom: -8px;
+
+    border: 2px solid transparent;
+    border-radius: 33px;
+    
+    background: linear-gradient(
+        to right,
+        #349469,
+        #62eaa8
+    ) border-box;
+
+    -webkit-mask:
+        linear-gradient(#fff 0 0) padding-box,
+        linear-gradient(#fff 0 0);
+
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+
+    pointer-events: none;
 }
 
 .heroImagem img {
     width: 100%;
     height: 380px;
-
     object-fit: cover;
-    border-radius: 25px;
-    border: 2px solid #349469;
 
+    border-radius: 25px;
     display: block;
 }
 
