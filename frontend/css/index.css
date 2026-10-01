@@ -96,21 +96,27 @@ body{
 }
 
 .heroTexto h1 {
-    font-size: 60px;
-    font-weight: 500;
-    line-height: 1.2;
-    margin: 0 0 20px 0;
+    max-width: 850px;
+
+    font-size: 62px;
+    font-weight: 600;
+
+    line-height: 1.08;
+
+    letter-spacing: -2px;
+
+    margin: 0 0 32px 0;
 }
 
 #acompanhamento {
-    background: linear-gradient(to right, #349469, #62eaa8);
+    background: linear-gradient(to right, #349469, #72eeb2);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
     
 }
 #fisioterapeutico{
-    background: linear-gradient(to right, #62eaa8, #349469);
+    background: linear-gradient(to right, #72eeb2, #349469);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -121,6 +127,7 @@ body{
     line-height: 1.6;
     max-width: 800px;
     margin: 0 0 30px 0;
+    color: #667;
 }
 
 .btnComecar {
