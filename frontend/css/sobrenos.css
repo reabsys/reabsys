@@ -1,25 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
-html{
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
     margin: 0;
     padding: 0;
 }
 
-body{
+body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     position: relative;
-    /* background-color: rgb(200, 211, 189); */
-    /* background-color: #000000; */
-        background: linear-gradient(
+
+    background: linear-gradient(
         to bottom,
-        rgb(254, 255, 252) 0%,
-        rgb(200, 211, 189) 75%,
-        #000000 75%,
-        #000000 100%
+        #f3f5f6 70%,
+        #000000 30%
     );
 }
+
 .header {
     position: fixed;
     top: 0;
@@ -117,15 +121,27 @@ body{
 
 .apresentacao {
     width: 100%;
-    min-height: 100vh;
-
+    min-height: 80vh;
     display: flex;
     align-items: center;
     justify-content: center;
-
-    padding: 0px 30px 80px;
-
+    padding: 120px 30px 0;
     text-align: center;
+
+    position: relative;
+    overflow: hidden;
+}
+
+
+.apresentacaoConteudo {
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    position: relative;
+    z-index: 1;
 }
 
 
@@ -136,6 +152,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    
 }
 
 .apresentacao h1 {
@@ -163,23 +180,83 @@ body{
 
     margin: 0;
 }
-#fisioterapia{
+
+#fisioterapia {
     background: linear-gradient(to right, #349469, #6ff1b3);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
 }
-#tecnologia{
+
+#tecnologia {
     background: linear-gradient(to right, #6ff1b3, #349469);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
 }
 
+.sobrenos {
+    width: 100%;
+    padding: 70px 5%;
+    background-color: #ffffff;
+    border-radius: 30px;
+}
+
+.sobrenosTitulo {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto 40px;
+}
+
+.sobrenosTitulo h2 {
+    margin: 0;
+    font-size: 48px;
+    font-weight: 700;
+    color: #111827;
+    letter-spacing: -1.5px;
+}
+
+.sobrenos-conteudo {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    max-width: 1150px;
+    margin: 0 auto;
+}
+
+.sobrenos-text {
+    flex: 1;
+    padding: 0 50px;
+}
+
+.sobrenos-text+.sobrenos-text {
+    border-left: 2px solid #d5d5d5;
+}
+
+.sobrenos-text h2 {
+    margin: 0 0 18px;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: #141a28;
+}
+
+.sobrenos-text p {
+    margin: 0;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #555;
+}
+
 .conhecaOTime {
     width: 100%;
     background-color: #f3f5f6;
 
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
     padding: 80px 5% 100px;
 
     box-sizing: border-box;
@@ -223,7 +300,7 @@ body{
     min-height: 430px;
 
     background-color: #ffffff;
-    border-radius: 10px;
+    border-radius: 25px;
     padding: 30px 25px;
 
     box-sizing: border-box;
@@ -347,4 +424,104 @@ body{
 
 .linkedin:hover {
     transform: scale(1.1);
+}
+
+.footer {
+    width: 100%;
+    background-color: #000000;
+    color: white;
+    box-sizing: border-box;
+}
+
+
+.footerContainer {
+    width: 98%;
+    margin: 0 auto;
+
+    min-height: 210px;
+
+    display: grid;
+    grid-template-columns: 2fr 1.3fr 1.5fr 1.5fr;
+    align-items: start;
+
+    padding-top: 35px;
+    padding-bottom: 30px;
+    box-sizing: border-box;
+}
+
+
+.footerBrand {
+    display: flex;
+    align-items: flex-start;
+}
+
+#logoFooter {
+    width: 220px;
+    height: auto;
+    display: block;
+}
+
+
+.footerColumn {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footerColumn h3 {
+    margin: 0 0 5px 0;
+
+    color: #5bd486;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.footerColumn a {
+    color: white;
+    text-decoration: none;
+
+    font-size: 16px;
+    font-weight: 400;
+
+    transition: 0.2s;
+}
+
+.footerColumn a:hover {
+    color: #5bd486;
+    transform: translateX(3px);
+}
+
+
+.footerBottom {
+    width: 94%;
+    margin: 0 auto;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.7);
+
+    min-height: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footerBottom p {
+    margin: 0;
+
+    font-size: 15px;
+}
+
+.footerLegal {
+    display: flex;
+    gap: 30px;
+}
+
+.footerLegal a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footerLegal a:hover {
+    color: #5bd486;
 }
