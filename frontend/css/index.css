@@ -464,7 +464,6 @@ img {
 
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
         align-items: center;
 
         padding: 5px 15px;
@@ -531,7 +530,7 @@ img {
     .navConta {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
 
         width: 100%;
         margin: 0;

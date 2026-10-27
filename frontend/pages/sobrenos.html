@@ -12,23 +12,38 @@
 
 <body>
     <header class="header">
-        <nav class="navHeader">
-            <div class="navLogo">
-                <img id="logoReabSYS" src="../assets/images/logo/ReabSYS_completa.png" alt="logoReabSYS">
-            </div>
+    <nav class="navHeader">
 
-            <div class="navLinks">
-                <a href="sobrenos.html">Sobre Nós</a>
-                <a href="">Planos</a>
-            </div>
+        <div class="navLogo">
+            <img id="logoReabSYS"
+                 src="../assets/images/logo/ReabSYS_completa.png"
+                 alt="Logo ReabSYS">
+        </div>
 
-            <div class="navConta">
-                <a href="">Criar Conta</a>
-                <a href="login.html"><button id="Entrar">Entrar</button></a>
-            </div>
+        <button class="menuHamburguer"
+                id="menuHamburguer"
+                aria-label="Abrir menu"
+                aria-expanded="false"
+                aria-controls="menuMobile">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
 
-        </nav>
-    </header>
+        <div class="navLinks" id="menuMobile">
+            <a href="pages/sobrenos.html">Sobre Nós</a>
+            <a href="">Planos</a>
+        </div>
+
+        <div class="navConta">
+            <a href="">Criar Conta</a>
+            <a href="pages/login.html">
+                <button id="Entrar">Entrar</button>
+            </a>
+        </div>
+
+    </nav>
+</header>
 
     <main>
         <section class="apresentacao">
