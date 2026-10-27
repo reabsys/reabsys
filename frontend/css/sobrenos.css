@@ -529,3 +529,299 @@ body {
 .footerLegal a:hover {
     color: #5bd486;
 }
+
+
+@media (max-width: 768px) {
+    .header {
+        height: auto;
+        min-height: 70px;
+    }
+
+    .navHeader {
+        height: auto;
+        min-height: 70px;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 10px 15px;
+        gap: 12px;
+    }
+
+    .navLogo {
+        margin-left: 0;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    #logoReabSYS {
+        width: 180px;
+        height: 55px;
+    }
+
+    .navLinks {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+        margin-left: 0;
+    }
+
+    .navLinks a,
+    .navConta a {
+        font-size: 14px;
+    }
+
+    .navConta {
+        width: 100%;
+        justify-content: center;
+        gap: 15px;
+        margin: 0;
+    }
+
+    #Entrar {
+        width: 100px;
+        height: 38px;
+        font-size: 14px;
+    }
+
+    .apresentacao {
+        min-height: auto;
+        padding: 210px 20px 70px;
+    }
+
+    .apresentacaoConteudo {
+        max-width: 100%;
+    }
+
+    .apresentacao h1 {
+        max-width: 100%;
+        font-size: clamp(32px, 8vw, 46px);
+        line-height: 1.15;
+        letter-spacing: -1px;
+        margin-bottom: 22px;
+    }
+
+    .apresentacao p {
+        max-width: 100%;
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    .sobrenos {
+        padding: 45px 22px;
+        border-top-left-radius: 22px;
+        border-top-right-radius: 22px;
+    }
+
+    .sobrenosTitulo {
+        margin-bottom: 28px;
+    }
+
+    .sobrenosTitulo h2,
+    .timeTitulo h2 {
+        font-size: 32px;
+        letter-spacing: -0.8px;
+    }
+
+    .sobrenos-conteudo {
+        flex-direction: column;
+        gap: 28px;
+    }
+
+    .sobrenos-text {
+        flex: none;
+        width: 100%;
+        padding: 0;
+    }
+
+    .sobrenos-text + .sobrenos-text {
+        border-left: none;
+        border-top: 2px solid #d5d5d5;
+        padding-top: 25px;
+    }
+
+    .sobrenos-text h2 {
+        font-size: 19px;
+    }
+
+    .sobrenos-text p {
+        font-size: 14px;
+        line-height: 1.8;
+        text-align: left;
+    }
+
+    .conhecaOTime {
+        padding: 45px 20px 55px;
+        border-bottom-left-radius: 22px;
+        border-bottom-right-radius: 22px;
+    }
+
+    .timeTitulo {
+        margin-bottom: 28px;
+    }
+
+    .time-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .time-card {
+        min-height: 0;
+        padding: 28px 22px;
+        border-radius: 20px;
+    }
+
+    .foto-container {
+        width: 105px;
+        height: 105px;
+    }
+
+    .time-card h3 {
+        font-size: 20px;
+    }
+
+    .cargo {
+        font-size: 13px;
+        margin-bottom: 15px;
+    }
+
+    .time-card p {
+        max-width: 100%;
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .saibaMais {
+        margin-bottom: 20px;
+    }
+
+.footerContainer {
+        width: 90%;
+        grid-template-columns: 1fr;
+        gap: 35px;
+        padding-top: 35px;
+        padding-bottom: 30px;
+    }
+
+    .footerBrand {
+        justify-content: center;
+    }
+
+    #logoFooter {
+        width: 190px;
+    }
+
+    .footerColumn {
+        gap: 15px;
+        text-align: center;
+    }
+
+    .footerColumn h3 {
+        font-size: 15px;
+    }
+
+    .footerColumn a {
+        font-size: 14px;
+    }
+
+    .footerBottom {
+        width: 90%;
+        min-height: auto;
+        padding: 20px 0;
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .footerBottom p {
+        font-size: 13px;
+    }
+
+    .footerLegal {
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .footerLegal a {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 400px) {
+    .navLinks {
+        gap: 12px;
+    }
+
+    .navLinks a,
+    .navConta a {
+        font-size: 12px;
+    }
+
+    .apresentacao {
+        padding-top: 220px;
+    }
+
+    .apresentacao h1 {
+        font-size: 31px;
+    }
+
+    .sobrenosTitulo h2,
+    .timeTitulo h2 {
+        font-size: 28px;
+    }
+
+.footerContainer {
+        width: 100%;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 30px;
+        padding: 32px 22px;
+    }
+
+    .footerBrand {
+        justify-content: center;
+    }
+
+    #logoFooter {
+        width: min(190px, 70vw);
+        height: auto;
+    }
+
+    .footerColumn {
+        align-items: center;
+        gap: 13px;
+        text-align: center;
+    }
+
+    .footerColumn h3 {
+        font-size: 15px;
+    }
+
+    .footerColumn a {
+        font-size: 14px;
+    }
+
+    .footerBottom {
+        width: calc(100% - 36px);
+        min-height: 0;
+        padding: 20px 0;
+        flex-direction: column;
+        gap: 14px;
+        text-align: center;
+    }
+
+    .footerBottom p {
+        font-size: 12px;
+        line-height: 1.5;
+    }
+
+    .footerLegal {
+        gap: 12px 20px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .footerLegal a {
+        font-size: 12px;
+    }
+}
