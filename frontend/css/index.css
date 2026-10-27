@@ -521,7 +521,7 @@ img {
     }
 
     .heroTexto h1 {
-        font-size: 36px;
+        font-size: clamp(40px, 8vw, 60px);
         line-height: 1.2;
         margin-bottom: 18px;
         margin-top: 40px;
@@ -664,7 +664,7 @@ img {
     }
 
     .heroTexto h1 {
-        font-size: 29px;
+        font-size: 40px;
     }
 
     .exercicio-card {

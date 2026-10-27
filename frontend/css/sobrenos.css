@@ -595,7 +595,7 @@ body {
 
     .apresentacao h1 {
         max-width: 100%;
-        font-size: clamp(32px, 8vw, 46px);
+        font-size: clamp(40px, 8vw, 60px);
         line-height: 1.15;
         letter-spacing: -1px;
         margin-bottom: 22px;
@@ -763,7 +763,7 @@ body {
     }
 
     .apresentacao h1 {
-        font-size: 31px;
+        font-size: 40px;
     }
 
     .sobrenosTitulo h2,
