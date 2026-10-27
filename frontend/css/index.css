@@ -446,6 +446,10 @@ img {
     max-width: 100%;
 }
 
+.menuHamburguer {
+    display: none;
+}
+
 
 @media (max-width: 768px) {
     .header {
@@ -457,56 +461,123 @@ img {
         width: 100%;
         height: auto;
         min-height: 70px;
+
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
-        padding: 10px 15px;
-        gap: 12px;
+
+        padding: 5px 15px;
+        gap: 0;
     }
 
     .navLogo {
-        margin-left: 0;
+        width: auto;
+        height: 60px;
+        margin: 0;
+
         display: flex;
-        justify-content: center;
-        width: 100%;
+        align-items: center;
+        overflow: visible;
     }
 
     #logoReabSYS {
-        width: 180px;
-        height: 55px;
+        width: 175px;
+        height: 65px;
         object-fit: contain;
     }
 
-    .navLinks {
+    .menuHamburguer {
         display: flex;
-        width: 100%;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 20px;
-        margin-left: 0;
-    }
-
-    .navConta {
-        display: flex;
-        width: 100%;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 15px;
+        gap: 5px;
+
+        flex-shrink: 0;
+        width: 45px;
+        height: 45px;
+        padding: 8px;
+
+        background: transparent;
+        border: none;
+        cursor: pointer;
+    }
+
+    .menuHamburguer span {
+        display: block;
+        width: 30px;
+        height: 3px;
+        background-color: white;
+        border-radius: 3px;
+
+        transition: transform 0.3s ease,
+            opacity 0.3s ease;
+    }
+
+    .navHeader.menu-aberto .menuHamburguer span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+
+    .navHeader.menu-aberto .menuHamburguer span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .navHeader.menu-aberto .menuHamburguer span:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+
+    .navLinks,
+    .navConta {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        width: 100%;
         margin: 0;
+        gap: 0;
+
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        visibility: hidden;
+        transform: translateY(-10px);
+
+        transition:
+            max-height 0.4s ease,
+            opacity 0.3s ease,
+            transform 0.3s ease,
+            visibility 0.3s ease;
+    }
+
+    .navHeader.menu-aberto .navLinks {
+        max-height: 130px;
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+        padding-top: 10px;
+    }
+
+    .navHeader.menu-aberto .navConta {
+        max-height: 160px;
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+        padding: 10px 0 20px;
+        gap: 10px;
     }
 
     .navLinks a,
     .navConta a {
-        font-size: 14px;
+        font-size: 20px;
+        padding: 10px;
     }
 
     #Entrar {
-        width: 100px;
-        height: 38px;
-        font-size: 14px;
+        width: 130px;
+        height: 42px;
+        font-size: 16px;
     }
-
 
     .hero {
         width: 100%;
@@ -524,7 +595,7 @@ img {
         font-size: clamp(40px, 8vw, 60px);
         line-height: 1.2;
         margin-bottom: 18px;
-        margin-top: 40px;
+
     }
 
     .heroTexto p {
@@ -649,13 +720,72 @@ img {
 }
 
 @media (max-width: 400px) {
-    .navLinks {
-        gap: 12px;
+
+    .header {
+        height: auto;
+        min-height: 70px;
+    }
+
+    .navHeader {
+        height: auto;
+        min-height: 70px;
+        flex-wrap: wrap;
+        padding: 5px 15px;
+    }
+
+    .navLogo {
+        height: 60px;
+        display: flex;
+        align-items: center;
+        overflow: visible;
+    }
+
+    #logoReabSYS {
+        width: 175px;
+        height: 65px;
+        object-fit: contain;
+    }
+
+    .menuHamburguer {
+        flex-shrink: 0;
+        width: 45px;
+        height: 45px;
+    }
+
+
+    .navLinks,
+    .navConta {
+        width: 100%;
+    }
+
+
+    .navHeader.menu-aberto .navLinks {
+        max-height: 130px;
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+        padding-top: 10px;
+    }
+
+    .navHeader.menu-aberto .navConta {
+        max-height: 160px;
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+        padding: 10px 0 20px;
+        gap: 10px;
     }
 
     .navLinks a,
     .navConta a {
-        font-size: 12px;
+        font-size: 20px;
+        padding: 10px;
+    }
+
+    #Entrar {
+        width: 130px;
+        height: 42px;
+        font-size: 16px;
     }
 
     .hero {
