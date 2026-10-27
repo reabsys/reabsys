@@ -618,3 +618,278 @@ body{
         font-size: 12px;
     }
 }
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+}
+
+@media (max-width: 900px) {
+    .hero {
+        gap: 40px;
+        padding-left: 45px;
+        padding-right: 45px;
+    }
+
+    .heroTexto h1 {
+        font-size: clamp(38px, 5vw, 54px);
+    }
+
+    .navLinks {
+        gap: clamp(20px, 3vw, 55px);
+    }
+
+    .exercicios-container {
+        justify-content: center;
+        gap: 28px;
+        flex-wrap: wrap;
+    }
+
+    .footerContainer {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 35px 25px;
+        padding: 35px 25px;
+    }
+}
+
+@media (max-width: 600px) {
+    .header {
+        width: 100%;
+    }
+
+    .navHeader {
+        min-height: 0;
+        height: auto;
+        padding: 10px 16px 12px;
+        gap: 8px;
+    }
+
+    .navLogo {
+        flex: 0 1 auto;
+        min-width: 0;
+    }
+
+    #logoReabSYS {
+        display: block;
+        width: clamp(125px, 42vw, 170px);
+        height: auto;
+    }
+
+    .navConta {
+        gap: 10px;
+        margin-left: auto;
+        margin-right: 0;
+    }
+
+    .navLinks {
+        order: 3;
+        width: 100%;
+        margin: 4px 0 0;
+        gap: 12px 22px;
+        justify-content: center;
+    }
+
+    .navLinks a,
+    .navConta a {
+        font-size: 12px;
+    }
+
+    #Entrar {
+        width: 82px;
+        height: 36px;
+        font-size: 12px;
+    }
+
+    .hero {
+        min-height: auto;
+        padding: 145px 22px 55px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 35px;
+        text-align: center;
+    }
+
+    .heroTexto {
+        width: 100%;
+    }
+
+    .heroTexto h1 {
+        font-size: clamp(30px, 8vw, 38px);
+        line-height: 1.16;
+        letter-spacing: -1px;
+        overflow-wrap: break-word;
+        margin-bottom: 20px;
+    }
+
+    .heroTexto p {
+        max-width: 100%;
+        font-size: 14px;
+        line-height: 1.65;
+        margin-bottom: 24px;
+    }
+
+    .btnComecar {
+        width: min(100%, 210px);
+        height: 52px;
+        font-size: 17px;
+    }
+
+    .heroImagem {
+        width: calc(100% - 12px);
+        max-width: 420px;
+    }
+
+    .heroImagem img {
+        height: clamp(210px, 65vw, 300px);
+        object-fit: cover;
+    }
+
+    .heroImagem::after {
+        top: -6px;
+        left: -6px;
+        right: -6px;
+        bottom: -6px;
+    }
+
+    .exercicios-section {
+        padding: 42px 16px;
+        border-radius: 24px;
+    }
+
+    .exercicios-container {
+        width: 100%;
+        padding: 0;
+        gap: 28px;
+    }
+
+    .exercicio-card {
+        width: min(100%, 290px);
+        height: 400px;
+        border-radius: 42px;
+    }
+
+    .exercicio-info {
+        left: 12px;
+        bottom: 18px;
+        width: calc(100% - 24px);
+        min-height: 0;
+        padding: 18px 20px;
+        border-radius: 25px;
+    }
+
+    .exercicio-info h3 {
+        font-size: 21px;
+    }
+
+    .exercicio-info p {
+        font-size: 18px;
+    }
+
+    #monitoramento {
+        margin-right: 0;
+        padding-left: 0;
+    }
+
+    .footerContainer {
+        width: 100%;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 30px;
+        padding: 32px 22px;
+    }
+
+    .footerBrand {
+        justify-content: center;
+    }
+
+    #logoFooter {
+        width: min(190px, 70vw);
+        height: auto;
+    }
+
+    .footerColumn {
+        align-items: center;
+        gap: 13px;
+        text-align: center;
+    }
+
+    .footerColumn h3 {
+        font-size: 15px;
+    }
+
+    .footerColumn a {
+        font-size: 14px;
+    }
+
+    .footerBottom {
+        width: calc(100% - 36px);
+        min-height: 0;
+        padding: 20px 0;
+        flex-direction: column;
+        gap: 14px;
+        text-align: center;
+    }
+
+    .footerBottom p {
+        font-size: 12px;
+        line-height: 1.5;
+    }
+
+    .footerLegal {
+        gap: 12px 20px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .footerLegal a {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 360px) {
+    .navHeader {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    #logoReabSYS {
+        width: 118px;
+    }
+
+    .navLinks {
+        gap: 10px 16px;
+    }
+
+    .hero {
+        padding-left: 17px;
+        padding-right: 17px;
+    }
+
+    .heroTexto h1 {
+        font-size: 29px;
+    }
+
+    .exercicio-card {
+        height: 360px;
+    }
+
+    .exercicio-info h3 {
+        font-size: 19px;
+    }
+
+    .exercicio-info p {
+        font-size: 16px;
+    }
+}
+
