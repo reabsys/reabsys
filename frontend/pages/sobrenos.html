@@ -7,23 +7,36 @@
     <link rel="stylesheet" href="../css/sobrenos.css">
     <title>Sobre nós</title>
     <link rel="icon" type="image/x-icon" href="../assets/images/logo/ReabSYS_iconeBranco.png">
+    <script src="../js/header.js" defer></script>
 </head>
 
 <body>
     <header class="header">
         <nav class="navHeader">
+
+            <button class="menuHamburguer" id="menuHamburguer" aria-label="Abrir menu" aria-expanded="false"
+                aria-controls="menuMobile">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
             <div class="navLogo">
-                <img id="logoReabSYS" src="../assets/images/logo/ReabSYS_completa.png" alt="logoReabSYS">
+                <img id="logoReabSYS" src="../assets/images/logo/ReabSYS_completa.png" alt="Logo ReabSYS">
             </div>
 
-            <div class="navLinks">
-                <a href="sobrenos.html">Sobre Nós</a>
+            <div class="navLinks" id="menuMobile">
+                <a href="../index.html">Início</a>
+                <a href="pages/sobrenos.html">Sobre Nós</a>
                 <a href="">Planos</a>
             </div>
 
             <div class="navConta">
+                
                 <a href="">Criar Conta</a>
-                <a href="login.html"><button id="Entrar">Entrar</button></a>
+                <a href="pages/login.html">
+                    <button id="Entrar">Entrar</button>
+                </a>
             </div>
 
         </nav>
@@ -39,40 +52,47 @@
             </div>
         </section>
 
-<section class="sobrenos">
+        <section class="sobrenos">
 
-    <div class="sobrenosTitulo">
-        <h2>Sobre nós</h2>
-    </div>
-    <div class="sobrenos-conteudo">
+            <div class="sobrenosTitulo">
+                <h2>Sobre nós</h2>
+            </div>
+            <div class="sobrenos-conteudo">
 
-        <div class="sobrenos-text">
-            <h2>Nossa missão</h2>
+                <div class="sobrenos-text">
+                    <h2>Nossa missão</h2>
 
-            <p>
-               A finalidade do desenvolvimento do ReabSYS é auxiliar na gestão e no acompanhamento de tratamentos fisioterapêuticos, proporcionando ao fisioterapeuta maior organização no gerenciamento de pacientes, planos de exercícios e evolução do tratamento, enquanto possibilita ao paciente acompanhar e registrar suas atividades durante o processo de reabilitação.
-            </p>
-        </div>
+                    <p>
+                        A finalidade do desenvolvimento do ReabSYS é auxiliar na gestão e no acompanhamento de
+                        tratamentos fisioterapêuticos, proporcionando ao fisioterapeuta maior organização no
+                        gerenciamento de pacientes, planos de exercícios e evolução do tratamento, enquanto possibilita
+                        ao paciente acompanhar e registrar suas atividades durante o processo de reabilitação.
+                    </p>
+                </div>
 
-        <div class="sobrenos-text">
-            <h2>Em quem focamos?</h2>
+                <div class="sobrenos-text">
+                    <h2>Em quem focamos?</h2>
 
-            <p>
-                O ReabSYS tem como público-alvo principal fisioterapeutas autônomos e seus respectivos pacientes, propondo atender às necessidades relacionadas à organização, ao acompanhamento e à continuidade dos tratamentos fisioterapêuticos.
-            </p>
-        </div>
+                    <p>
+                        O ReabSYS tem como público-alvo principal fisioterapeutas autônomos e seus respectivos
+                        pacientes, propondo atender às necessidades relacionadas à organização, ao acompanhamento e à
+                        continuidade dos tratamentos fisioterapêuticos.
+                    </p>
+                </div>
 
-        <div class="sobrenos-text">
-            <h2>Nosso Diferencial</h2>
+                <div class="sobrenos-text">
+                    <h2>Nosso Diferencial</h2>
 
-            <p>
-                O diferencial do ReabSYS é justamente aproximar o fisioterapeuta do paciente, possibilitando o acompanhamento remoto, aumentando o engajamento do paciente, e tornando muito mais simples e fácil a organização da rotina e tarefas do profissional fisioterapeuta.
-            </p>
-        </div>
+                    <p>
+                        O diferencial do ReabSYS é justamente aproximar o fisioterapeuta do paciente, possibilitando o
+                        acompanhamento remoto, aumentando o engajamento do paciente, e tornando muito mais simples e
+                        fácil a organização da rotina e tarefas do profissional fisioterapeuta.
+                    </p>
+                </div>
 
-    </div>
+            </div>
 
-</section>
+        </section>
 
         <section class="conhecaOTime">
 
@@ -99,7 +119,8 @@
 
                     <a href="#" class="saibaMais">Saiba mais</a>
 
-                    <a href="https://www.linkedin.com/in/fernandobaioccobatista/" target="_blank" class="linkedin">in</a>
+                    <a href="https://www.linkedin.com/in/fernandobaioccobatista/" target="_blank"
+                        class="linkedin">in</a>
 
                 </div>
 

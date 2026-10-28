@@ -7,27 +7,43 @@
     <link rel="stylesheet" href="css/index.css">
     <title>ReabSYS</title>
     <link rel="icon" type="image/x-icon" href="assets/images/logo/ReabSYS_iconeBranco.png">
+    <script src="js/header.js" defer></script>
 </head>
 
 <body>
+
     <header class="header">
         <nav class="navHeader">
+
+            <button class="menuHamburguer" id="menuHamburguer" aria-label="Abrir menu" aria-expanded="false"
+                aria-controls="menuMobile">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
             <div class="navLogo">
-                <img id="logoReabSYS" src="assets/images/logo/ReabSYS_completa.png" alt="logoReabSYS">
+                <img id="logoReabSYS" src="assets/images/logo/ReabSYS_completa.png" alt="Logo ReabSYS">
             </div>
 
-            <div class="navLinks">
+
+
+            <div class="navLinks" id="menuMobile">
+                <a href="#">Início</a>
                 <a href="pages/sobrenos.html">Sobre Nós</a>
                 <a href="">Planos</a>
             </div>
 
             <div class="navConta">
                 <a href="">Criar Conta</a>
-                <a href="pages/login.html"><button id="Entrar">Entrar</button></a>
+                <a href="pages/login.html">
+                    <button id="Entrar">Entrar</button>
+                </a>
             </div>
 
         </nav>
     </header>
+
 
     <section class="hero">
 
