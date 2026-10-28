@@ -17,13 +17,11 @@ body {
     padding: 0;
     position: relative;
 
-        background: linear-gradient(
-        to bottom,
-        rgb(254, 255, 252) 0%,
-        rgb(200, 211, 189) 45%,
-        #000000 75%,
-        #000000 100%
-    );
+    background: linear-gradient(to bottom,
+            rgb(254, 255, 252) 0%,
+            rgb(200, 211, 189) 45%,
+            #000000 75%,
+            #000000 100%);
 }
 
 .header {
@@ -154,7 +152,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+
 }
 
 .apresentacao h1 {
@@ -201,8 +199,8 @@ body {
     width: 100%;
     padding: 70px 5%;
     background-color: #ffffff;
-    border-top-left-radius:30px ;
-    border-top-right-radius:30px ;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
 }
 
 .sobrenosTitulo {
@@ -664,7 +662,7 @@ body {
 
     .apresentacao {
         min-height: auto;
-        
+        padding: 150px 20px 70px;
     }
 
     .apresentacaoConteudo {
@@ -677,7 +675,7 @@ body {
         line-height: 1.15;
         letter-spacing: -1px;
         margin-bottom: 22px;
-        
+
     }
 
     .apresentacao p {
@@ -714,7 +712,7 @@ body {
         padding: 0;
     }
 
-    .sobrenos-text + .sobrenos-text {
+    .sobrenos-text+.sobrenos-text {
         border-left: none;
         border-top: 2px solid #d5d5d5;
         padding-top: 25px;
@@ -775,7 +773,7 @@ body {
         margin-bottom: 20px;
     }
 
-.footerContainer {
+    .footerContainer {
         width: 90%;
         grid-template-columns: 1fr;
         gap: 35px;
@@ -897,7 +895,7 @@ body {
     }
 
     .apresentacao {
-        padding-top: 220px;
+        padding: 150px 20px 70px;
     }
 
     .apresentacao h1 {
@@ -909,7 +907,7 @@ body {
         font-size: 28px;
     }
 
-.footerContainer {
+    .footerContainer {
         width: 100%;
         grid-template-columns: minmax(0, 1fr);
         gap: 30px;

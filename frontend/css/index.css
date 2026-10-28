@@ -293,15 +293,6 @@ body {
     justify-content: left;
 }
 
-.exercicio-info p {
-    margin: 0;
-
-    font-size: 24px;
-    font-weight: 500;
-    line-height: 1.1;
-}
-
-
 
 .exercicio-info h3 {
     margin: 0;
@@ -481,8 +472,8 @@ img {
     }
 
     #logoReabSYS {
-        width: 175px;
-        height: 65px;
+        width: 185px;
+        height: 75px;
         object-fit: contain;
     }
 
@@ -663,7 +654,12 @@ img {
     }
 
     .exercicio-info p {
-        font-size: 20px;
+        margin: 2px 0 0;
+
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 1.1;
+        text-align: justify;
     }
 
     .footerContainer {
@@ -797,14 +793,25 @@ img {
     }
 
     .exercicio-card {
-        height: 360px;
-    }
-
-    .exercicio-info h3 {
-        font-size: 19px;
+        width: 280px;
+        max-width: 100%;
+        height: 420px;
+        flex-shrink: 0;
     }
 
     .exercicio-info p {
-        font-size: 16px;
+        margin: 2px 0 0;
+
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 1.1;
+        text-align: justify;
     }
+
+
+    /* #monitoramento {
+    margin-right: 50px;
+    padding-left: 25px;
+} */
+
 }
