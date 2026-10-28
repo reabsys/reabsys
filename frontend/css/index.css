@@ -531,7 +531,6 @@ img {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-
         width: 100%;
         margin: 0;
         gap: 0;
@@ -550,7 +549,7 @@ img {
     }
 
     .navHeader.menu-aberto .navLinks {
-        max-height: 130px;
+        max-height: 250px;
         opacity: 1;
         visibility: visible;
         transform: translateY(0);
@@ -558,11 +557,11 @@ img {
     }
 
     .navHeader.menu-aberto .navConta {
-        max-height: 160px;
+        max-height: 180px;
         opacity: 1;
         visibility: visible;
         transform: translateY(0);
-        padding: 10px 0 20px;
+        padding: 3px 0px 10px 0px;
         gap: 10px;
     }
 
@@ -757,9 +756,8 @@ img {
         width: 100%;
     }
 
-
     .navHeader.menu-aberto .navLinks {
-        max-height: 130px;
+        max-height: 250px;
         opacity: 1;
         visibility: visible;
         transform: translateY(0);
@@ -767,11 +765,11 @@ img {
     }
 
     .navHeader.menu-aberto .navConta {
-        max-height: 160px;
+        max-height: 180px;
         opacity: 1;
         visibility: visible;
         transform: translateY(0);
-        padding: 10px 0 20px;
+        padding: 3px 0px 10px 0px;
         gap: 10px;
     }
 
