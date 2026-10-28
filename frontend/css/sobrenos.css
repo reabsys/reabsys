@@ -530,6 +530,10 @@ body {
     color: #5bd486;
 }
 
+.menuHamburguer {
+    display: none;
+}
+
 
 @media (max-width: 768px) {
     .header {
@@ -660,7 +664,7 @@ body {
 
     .apresentacao {
         min-height: auto;
-        padding: 210px 20px 70px;
+        
     }
 
     .apresentacaoConteudo {
@@ -673,12 +677,14 @@ body {
         line-height: 1.15;
         letter-spacing: -1px;
         margin-bottom: 22px;
+        
     }
 
     .apresentacao p {
         max-width: 100%;
         font-size: 15px;
         line-height: 1.7;
+        text-align: justify;
     }
 
     .sobrenos {
@@ -721,7 +727,7 @@ body {
     .sobrenos-text p {
         font-size: 14px;
         line-height: 1.8;
-        text-align: left;
+        text-align: justify;
     }
 
     .conhecaOTime {
