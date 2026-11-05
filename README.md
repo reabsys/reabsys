@@ -1,6 +1,5 @@
-#  ReabSYS
+#  ReabSYS - Plataforma de Acompanhamento Fisioterapêutico
 
-### Plataforma de Acompanhamento Fisioterapêutico
 
 O **ReabSYS** é um aplicativo multiplataforma desenvolvido para conectar **fisioterapeutas e pacientes**, centralizando o acompanhamento de tratamentos de reabilitação em um único sistema.
 
