@@ -76,7 +76,7 @@ body {
 
 .navLinks a:hover,
 .navConta a:hover {
-    transform: scale(1.05);
+    transform: scale(1.02);
 }
 
 #Entrar {
@@ -97,7 +97,7 @@ body {
 }
 
 #Entrar:hover {
-    transform: scale(1.05);
+    transform: scale(1.01);
 }
 
 .hero {
@@ -168,7 +168,7 @@ body {
 }
 
 .btnComecar:hover {
-    transform: scale(1.05);
+    transform: scale(1.02);
 }
 
 .heroImagem {
@@ -237,7 +237,7 @@ body {
 .exercicio-card {
     position: relative;
 
-    width: 220px;
+    width: 240px;
     height: 440px;
 
     border: 2px solid #349469;
@@ -313,8 +313,7 @@ body {
 }
 
 #monitoramento {
-    margin-right: 100px;
-    padding-left: 7px;
+    padding-left: 15px;
 }
 
 
