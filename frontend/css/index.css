@@ -240,7 +240,7 @@ body {
     width: 220px;
     height: 440px;
 
-    border: 2px solid #5bd27f;
+    border: 2px solid #349469;
     border-radius: 65px;
     overflow: hidden;
 
@@ -253,7 +253,7 @@ body {
 
 .exercicio-card:hover {
     transform: translateX(8px);
-    box-shadow: -12px 0px 0px #5bd27f;
+    box-shadow: -12px 0px 0px #349469;
 }
 
 
@@ -282,7 +282,7 @@ body {
 
     box-sizing: border-box;
 
-    background-color: #5bd27f;
+    background-color: #349469;
 
     border-radius: 35px;
 
