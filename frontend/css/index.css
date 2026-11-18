@@ -215,9 +215,10 @@ body {
     width: 100%;
     padding: 70px 0;
     background-color: #ffffff;
-    border-radius: 30px;
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
 }
 
 .secaoTitulo {
@@ -326,6 +327,16 @@ body {
 
 #monitoramento {
     padding-left: 15px;
+}
+
+.comoFunciona-section {
+    width: 100%;
+    padding: 70px 0 100px;
+    background-color: #e0e0e0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
 }
 
 
