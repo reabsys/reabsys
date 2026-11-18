@@ -88,7 +88,7 @@ h1 {
 
     padding: 0 18px;
 
-    border: 2px solid #00843d;
+    border: 2px solid #349469;
     border-radius: 10px;
 
     outline: none;
@@ -106,7 +106,7 @@ h1 {
 }
 
 .campo input:focus {
-    border-color: #006f34;
+    border-color: #349469;
 
     box-shadow: 0 0 0 3px rgba(0, 132, 61, 0.10);
 }
@@ -121,7 +121,7 @@ button {
     border: none;
     border-radius: 30px;
 
-    background-color: #00843d;
+    background-color: #349469;
 
     color: white;
 
@@ -135,7 +135,7 @@ button {
 }
 
 button:hover {
-    background-color: #006f34;
+    background-color: #26704f;
 }
 
 
