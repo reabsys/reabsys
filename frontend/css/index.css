@@ -581,10 +581,11 @@ img {
 
     .hero {
         width: 100%;
-        padding: 150px 25px 50px 25px;
+        min-height: auto;
+        padding: 130px 25px 40px 25px;
         flex-direction: column;
         text-align: center;
-        gap: 35px;
+        gap: 0;
     }
 
     .heroTexto {
@@ -608,7 +609,7 @@ img {
     }
 
     .btnComecar {
-        width: 190px;
+        width: 300px;
         height: 54px;
         font-size: 18px;
     }
@@ -810,6 +811,12 @@ img {
         line-height: 1.6;
         margin-bottom: 25px;
         text-align: justify;
+    }
+
+    .btnComecar {
+        width: 300px;
+        height: 54px;
+        font-size: 18px;
     }
 
     .exercicio-card {
