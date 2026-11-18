@@ -92,7 +92,7 @@ body {
 
 .navLinks a:hover,
 .navConta a:hover {
-    transform: scale(1.05);
+    transform: scale(1.02);
 }
 
 
@@ -115,7 +115,7 @@ body {
 
 
 #Entrar:hover {
-    transform: scale(1.05);
+    transform: scale(1.01);
 }
 
 
