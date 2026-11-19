@@ -11,7 +11,7 @@ body {
 }
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #c8d3bd;
+    background-color: #e0e0e0;
 }
 
 
@@ -159,5 +159,44 @@ button:hover {
 
 .cadastro a:hover {
     text-decoration: underline;
+}
+
+.campo-senha {
+    position: relative;
+}
+
+.campo-senha input {
+    padding-right: 52px;
+}
+
+.campo .toggle-senha,
+.campo .toggle-senha:hover {
+    position: absolute;
+    top: 50%;
+    right: 14px;
+    transform: translateY(-50%);
+
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 4px;
+
+    display: flex;
+    align-items: center;
+
+    background: none;
+    border: none;
+    border-radius: 6px;
+
+    color: #349469;
+    cursor: pointer;
+}
+
+.campo .toggle-senha:hover {
+    color: #26704f;
+}
+
+.campo .toggle-senha:focus-visible {
+    outline: 2px solid #349469;
 }
 
