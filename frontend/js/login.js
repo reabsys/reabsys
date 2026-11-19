@@ -15,18 +15,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const mensagem = document.createElement('p');
     mensagem.className = 'mensagem-erro';
     mensagem.setAttribute('role', 'alert');
-    mensagem.hidden = true;
     form.insertBefore(mensagem, botao);
 
     function mostrarErro(texto) {
         mensagem.textContent = texto;
-        mensagem.hidden = false;
         inputCrefito.classList.add('input-erro');
         inputSenha.classList.add('input-erro');
     }
 
     function limparErro() {
-        mensagem.hidden = true;
         mensagem.textContent = '';
         inputCrefito.classList.remove('input-erro');
         inputSenha.classList.remove('input-erro');
