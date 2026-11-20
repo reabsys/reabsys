@@ -21,11 +21,13 @@ body {
     position: fixed;
     top: 0;
     left: 0;
+    box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.12);
 
     width: 100%;
     height: 80px;
 
-    background-color: #349469;
+    background-color: white;
+
 
     z-index: 1000;
 }
@@ -67,16 +69,40 @@ body {
     margin-right: 5%;
 }
 
+.menuMobile,
+.menuMobileInner {
+    display: contents;
+}
+
+#CriarConta {
+    transition: 0.2s;
+}
+
+#CriarConta:hover {
+    transform: scale(1.05);
+}
+
 .navLinks a,
 .navConta a {
-    color: white;
+    position: relative;
     text-decoration: none;
+    color: #349469;
     font-size: 18px;
 }
 
-.navLinks a:hover,
-.navConta a:hover {
-    transform: scale(1.02);
+.navLinks a::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2.5px;
+    background-color: #349469;
+    transition: width 0.3s ease;
+}
+
+.navLinks a:hover::after {
+    width: 100%;
 }
 
 #Entrar {
@@ -84,20 +110,26 @@ body {
     height: 50px;
 
     font-family: 'Poppins', sans-serif;
-    font-size: 18px;
+    font-size: 20px;
 
     border: 1px solid rgba(0, 0, 0, 0.247);
     border-radius: 30px;
 
-    background-color: white;
+    color: white;
+    background-color: #349469;
 
     cursor: pointer;
 
-    transition: 0.2s;
+    transition: background-color 0.2s, border-color 0.2s, transform 0.2s, box-shadow 0.2s;
 }
 
 #Entrar:hover {
-    transform: scale(1.01);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(52, 148, 105, 0.35);
+}
+
+#Entrar:active {
+    transform: translateY(-1px);
 }
 
 .hero {
@@ -110,6 +142,7 @@ body {
     padding: 90px 100px 10px 100px;
     box-sizing: border-box;
 }
+
 
 .heroTexto {
     width: 55%;
@@ -151,6 +184,12 @@ body {
     color: #667;
 }
 
+@property --corte {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 50%;
+}
+
 .btnComecar {
     width: 290px;
     height: 62px;
@@ -158,17 +197,24 @@ body {
     border: none;
     border-radius: 50px;
 
-    background: linear-gradient(30deg, #62eaa8 50%, #349469 100%);
+    --corte: 50%;
+    background: linear-gradient(30deg, #62eaa8 var(--corte), #349469 100%);
 
     font-family: 'Poppins', sans-serif;
     font-size: 23px;
 
     cursor: pointer;
-    transition: 0.2s;
+    transition: --corte 0.5s ease, transform 0.2s, box-shadow 0.2s;
 }
 
 .btnComecar:hover {
-    transform: scale(1.02);
+    --corte: 90%;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(52, 148, 105, 0.35);
+}
+
+.btnComecar:active {
+    transform: translateY(-1px);
 }
 
 .heroImagem {
@@ -509,15 +555,14 @@ img {
         display: block;
         width: 30px;
         height: 3px;
-        background-color: white;
+        background-color: #349469;
         border-radius: 3px;
 
-        transition: transform 0.3s ease,
-            opacity 0.3s ease;
+        transition: transform 0.3s ease, opacity 0.3s ease;
     }
 
     .navHeader.menu-aberto .menuHamburguer span:nth-child(1) {
-        transform: translateY(7px) rotate(45deg);
+        transform: translateY(8px) rotate(45deg);
     }
 
     .navHeader.menu-aberto .menuHamburguer span:nth-child(2) {
@@ -525,7 +570,26 @@ img {
     }
 
     .navHeader.menu-aberto .menuHamburguer span:nth-child(3) {
-        transform: translateY(-9px) rotate(-45deg);
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .menuMobile {
+        display: grid;
+        grid-template-rows: 0fr;
+        width: 100%;
+        visibility: hidden;
+        transition: grid-template-rows 0.35s ease, visibility 0.35s;
+    }
+
+    .menuMobileInner {
+        display: block;
+        min-height: 0;
+        overflow: hidden;
+    }
+
+    .navHeader.menu-aberto .menuMobile {
+        grid-template-rows: 1fr;
+        visibility: visible;
     }
 
     .navLinks,
@@ -536,34 +600,14 @@ img {
         width: 100%;
         margin: 0;
         gap: 0;
-
-        max-height: 0;
-        opacity: 0;
-        overflow: hidden;
-        visibility: hidden;
-        transform: translateY(-10px);
-
-        transition:
-            max-height 0.4s ease,
-            opacity 0.3s ease,
-            transform 0.3s ease,
-            visibility 0.3s ease;
     }
 
-    .navHeader.menu-aberto .navLinks {
-        max-height: 250px;
-        opacity: 1;
-        visibility: visible;
-        transform: translateY(0);
+    .navLinks {
         padding-top: 10px;
     }
 
-    .navHeader.menu-aberto .navConta {
-        max-height: 180px;
-        opacity: 1;
-        visibility: visible;
-        transform: translateY(0);
-        padding: 3px 0px 10px 0px;
+    .navConta {
+        padding: 3px 0 10px 0;
         gap: 10px;
     }
 
@@ -760,29 +804,6 @@ img {
         flex-shrink: 0;
         width: 45px;
         height: 45px;
-    }
-
-
-    .navLinks,
-    .navConta {
-        width: 100%;
-    }
-
-    .navHeader.menu-aberto .navLinks {
-        max-height: 250px;
-        opacity: 1;
-        visibility: visible;
-        transform: translateY(0);
-        padding-top: 10px;
-    }
-
-    .navHeader.menu-aberto .navConta {
-        max-height: 180px;
-        opacity: 1;
-        visibility: visible;
-        transform: translateY(0);
-        padding: 3px 0px 10px 0px;
-        gap: 10px;
     }
 
     .navLinks a,
