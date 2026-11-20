@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #e0e0e0;
+}
+
+.cadastro-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 40px 20px;
+   
+}
+
+.titulo-cadastro{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.titulo-cadastro h1{
+    margin: 0;
+    font-size: 28px;
+    font-weight: 600;
+    color: #173c3c;
+}
+
+.titulo-cadastro p{
+    font-size: 18px;
+    color: #526985;
+    margin: 0;
+}
+
+.abas{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background-color: #349469;
+    border: none;
+    border-radius: 20px 20px 0 0;
+    overflow: hidden;
+}
+
+.abas button{
+    flex: 1;
+    padding: 20px;
+    border: none;
+    background-color: transparent;
+    color:white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.abas button.ativa{
+    background-color: #349469;
+    color: #ffffff;
+    border-bottom: 5px solid #349469;
+}
+
+.abas button:not(.ativa):hover{
+    background-color: #dcffef;
+    color: #00843d;
+}
+
+.div-cadastro{
+    width: 100%;
+    max-width: 810px;
+    padding: 30px 40px;
+    background-color: white;
+    border-radius: 22px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);    
+}
+
+.logoReabSYS {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.logoReabSYS img {
+    width: 210px;
+    height: auto;
+}
+
+.campo {
+    margin-bottom: 16px;
+}
+
+.campo label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #00843d;
+}
+
+.campo input {
+    width: 100%;
+    height: 50px;
+    padding: 0 18px;
+    border: 2px solid #349469;
+    border-radius: 10px;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: #333;
+    transition: 0.2s;
+}
+
+.campo input::placeholder {
+    color: #9a9a9a;
+}
+
+.campo input:focus {
+    border-color: #349469;
+    box-shadow: 0 0 0 3px rgba(0, 132, 61, 0.10);
+}
+
+#especialidade{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    width: 100%;
+    cursor: pointer;
+    box-sizing: border-box;
+    padding: 14px 44px 14px 18px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: #333;
+    background-color: #fff;
+    border: 2px solid #2e9e6b;
+    border-radius: 10px;
+    transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+select option:hover {
+    background-color: #cdeedd;
+}

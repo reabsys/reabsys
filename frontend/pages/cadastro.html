@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro | ReabSYS</title>
+    <link rel="stylesheet" href="../css/cadastro.css">
+    <link rel="icon" type="image/png" href="../assets/images/logo/ReabSYS_iconeBranco.png">
+</head>
+<body>
+    <main>
+        <section class="cadastro-section">
+            <div class="titulo-cadastro">
+                <div class="logoReabSYS">
+                    <img src="../assets/images/logo/ReabSYS_completa2.png" alt="Logo ReabSYS">
+                </div>
+
+                <h1>Crie sua conta</h1>
+                <p>Escolha seu perfil e preencha os dados para começar.</p>
+            </div>
+            <div class="div-cadastro">
+                <div class="abas">
+                    <button>Fisioterapeuta</button>
+                    <button>Paciente</button>
+                </div>            
+
+                <form>
+                    <!--Cadastro do fisioterapeuta-->
+                    <div class="campo">
+                        <label for="nome">Nome completo *</label>
+                        <input type="text" id="nome-completo" name="nome-completo" placeholder="Digite seu nome completo" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="CREFITO">CREFITO *</label>
+                        <input type="text" id="CREFITO" name="CREFITO" placeholder="Digite seu CREFITO" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="email">E-mail *</label>
+                        <input type="email" id="email" name="email" placeholder="exemplo@exemplo.com" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="criar-senha">Senha *</label>
+                        <input type="password" id="criar-senha" name="criar-senha" placeholder="Mínimo 6 caracteres" required>
+                    </div>
+                    
+                    <!--Form de seleção de especialidade-->
+                    <form>
+                        <label for="especialidade">Qual a sua especialidade?</label><br>
+                        <select id="especialidade" name="especialidade">
+                            <option value="">--Escolha uma opção--</option>
+                            <option value="acupuntura">Acupuntura</option>
+                            <option value="fisio-aquatica">Fisioterapia Aquática</option>
+                            <option value="fisio-cardio">Fisioterapia Cardiovascular</option>
+                            <option value="fisio-dermato">Fisioterapia Dermatofuncional</option>
+                            <option value="fisio-trabalho">Fisioterapia do Trabalho</option>
+                            <option value="fisio-geronto">Fisioterapia em Gerontologia</option>
+                            <option value="fisio-oncologia">Fisioterapia em Oncologia</option>
+                            <option value="fisio-reumeto">Fisioterapia em Reumatologia</option>
+                            <option value="fisio-mulher">Fisioterapia em Saúde da Mulher</option>
+                            <option value="fisio-intensiva">Fisioterapia em Terapia Intensiva</option>
+                            <option value="fisio-neonato-pediatria">Fisioterapia em Terapia Intensiva (Neonatologia e Pediatria)</option>
+                            <option value="fisio-esporte">Fisioterapia Esportiva</option>
+                            <option value="fisio-neuro">Fisioterapia Neurofuncional</option>
+                            <option value="fisio-respiratoria">Fisioterapia Respiratória</option>
+                            <option value="fisio-traumo-orto">Fisioterapia Traumato-Ortopédica</option>
+                            <option value="osteopatia">Osteopatia</option>
+                            <option value="quiropraxia">Quiropraxia</option>
+                        </select>
+                    </form>
+                    
+                </form>
+
+                <form>
+                    <!--Cadastro do paciente-->
+                                    
+                </form>
+
+            </div>
+        </section>
+    </main>
+</body>
+
+
+</html>
