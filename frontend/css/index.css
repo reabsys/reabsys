@@ -86,7 +86,7 @@ body {
 .navConta a {
     position: relative;
     text-decoration: none;
-    color: #349469;
+    color: black;
     font-size: 18px;
 }
 
@@ -97,7 +97,7 @@ body {
     left: 0;
     width: 0;
     height: 2.5px;
-    background-color: #349469;
+    background-color: black;
     transition: width 0.3s ease;
 }
 
@@ -143,12 +143,26 @@ body {
     box-sizing: border-box;
 }
 
+.hero {
+    background:
+        linear-gradient(90deg,
+            rgba(0, 0, 0, 0.82) 0%,
+            rgba(0, 0, 0, 0.65) 45%,
+            rgba(0, 0, 0, 0.15) 100%),
+        url('../assets/images/exercicios/index-image.webp') center / cover no-repeat;
+}
+
 
 .heroTexto {
+    color: rgba(255, 255, 255, 0.88);
+    text-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
     width: 55%;
 }
 
 .heroTexto h1 {
+
+    color: #ffffff;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
     max-width: 850px;
 
     font-size: 67px;
@@ -162,15 +176,14 @@ body {
 }
 
 #acompanhamento {
-    background: linear-gradient(to right, #349469, #72eeb2);
+    background: linear-gradient(to right, #a8f5d0, #349469 );
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-
 }
 
 #fisioterapeutico {
-    background: linear-gradient(to right, #72eeb2, #349469);
+    background: linear-gradient(to right, #349469, #a8f5d0);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -181,81 +194,35 @@ body {
     line-height: 1.6;
     max-width: 800px;
     margin: 0 0 30px 0;
-    color: #667;
+    color: rgb(188, 183, 183);
 }
 
-@property --corte {
-    syntax: '<percentage>';
-    inherits: false;
-    initial-value: 50%;
-}
 
 .btnComecar {
-    width: 290px;
+    width: 300px;
     height: 62px;
 
     border: none;
     border-radius: 50px;
-
-    --corte: 50%;
-    background: linear-gradient(30deg, #62eaa8 var(--corte), #349469 100%);
+    background-color: #349469;
+    color: white;
 
     font-family: 'Poppins', sans-serif;
     font-size: 23px;
 
     cursor: pointer;
-    transition: --corte 0.5s ease, transform 0.2s, box-shadow 0.2s;
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .btnComecar:hover {
-    --corte: 90%;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 14px rgba(52, 148, 105, 0.35);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(52, 148, 105, 0.3);
 }
 
 .btnComecar:active {
     transform: translateY(-1px);
 }
 
-.heroImagem {
-    position: relative;
-    width: 38%;
-}
-
-.heroImagem::after {
-    content: "";
-    position: absolute;
-
-    top: -8px;
-    left: -8px;
-    right: -8px;
-    bottom: -8px;
-
-    border: 2px solid transparent;
-    border-radius: 33px;
-
-    background: linear-gradient(to right,
-            #349469,
-            #62eaa8) border-box;
-
-    -webkit-mask:
-        linear-gradient(#fff 0 0) padding-box,
-        linear-gradient(#fff 0 0);
-
-    -webkit-mask-composite: xor;
-    mask-composite: exclude;
-
-    pointer-events: none;
-}
-
-.heroImagem img {
-    width: 100%;
-    height: 380px;
-    object-fit: cover;
-
-    border-radius: 25px;
-    display: block;
-}
 
 .exercicios-section {
     width: 100%;
@@ -555,7 +522,7 @@ img {
         display: block;
         width: 30px;
         height: 3px;
-        background-color: #349469;
+        background-color: black;
         border-radius: 3px;
 
         transition: transform 0.3s ease, opacity 0.3s ease;

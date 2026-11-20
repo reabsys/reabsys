@@ -93,7 +93,7 @@ body {
 .navConta a {
     position: relative;
     text-decoration: none;
-    color: #349469;
+    color: black;
     font-size: 18px;
 }
 
@@ -104,7 +104,7 @@ body {
     left: 0;
     width: 0;
     height: 2.5px;
-    background-color: #349469;
+    background-color: black;
     transition: width 0.3s ease;
 }
 
@@ -610,7 +610,7 @@ body {
         display: block;
         width: 30px;
         height: 3px;
-        background-color: #349469;
+        background-color: black;
         border-radius: 3px;
 
         transition: transform 0.3s ease, opacity 0.3s ease;
