@@ -117,3 +117,10 @@ if (campoData) {
     });
 
 }
+
+formularios.forEach(formulario => {
+    formulario.addEventListener("submit", function (evento) {
+        evento.preventDefault();
+        window.location.href = "login.html";
+    });
+});
