@@ -4,8 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro | ReabSYS</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/air-datepicker@3.6.0/air-datepicker.css">
     <link rel="stylesheet" href="../css/cadastro.css">
     <link rel="icon" type="image/png" href="../assets/images/logo/ReabSYS_iconeBranco.png">
+    <link rel="stylesheet" href="../css/cadastro.css">
+    
 </head>
 <body>
     <main>
@@ -20,15 +23,17 @@
             </div>
             <div class="div-cadastro">
                 <div class="abas">
-                    <button>Fisioterapeuta</button>
-                    <button>Paciente</button>
+                    <button type="button" class="aba ativa" data-form="form-fisio">Fisioterapeuta</button>
+                    <button type="button" class="aba" data-form="form-paciente">Paciente</button>
                 </div>            
 
-                <form>
-                    <!--Cadastro do fisioterapeuta-->
+                <!--Form do fisioterapeuta-->
+                <form id="form-fisio" class="formulario">
+                    
                     <div class="campo">
                         <label for="nome">Nome completo *</label>
-                        <input type="text" id="nome-completo" name="nome-completo" placeholder="Digite seu nome completo" required>
+                        <input type="text" id="nome-fisio" name="nome-fisio" placeholder="Digite seu nome completo" required>
+                        
                     </div>
 
                     <div class="campo">
@@ -38,18 +43,29 @@
 
                     <div class="campo">
                         <label for="email">E-mail *</label>
-                        <input type="email" id="email" name="email" placeholder="exemplo@exemplo.com" required>
+                        <input type="email" id="email-fisio" name="email-fisio" placeholder="exemplo@exemplo.com" required>
+                      
                     </div>
 
                     <div class="campo">
-                        <label for="criar-senha">Senha *</label>
-                        <input type="password" id="criar-senha" name="criar-senha" placeholder="Mínimo 6 caracteres" required>
-                    </div>
+                        <label for="senha">Senha *</label>
+                        <input type="password" id="senha" name="senha" placeholder="Mínimo 6 caracteres" minlength="8" required>
+
+                         <small class="info-senha">A senha deve conter: </small>
+                        <ul class="requisito-senha">
+                            <li id="tamanho">Pelo menos 8 caracteres</li>
+                            <li id="numero">Um número</li>
+                            <li id="maiuscula">Uma letra maiúscula</li>
+                            <li id="minuscula">Uma letra minúscula</li>
+                            <li id="especial">Um caractere especial (!@#$%)</li>
+                        </ul>
+                    </div>                   
                     
                     <!--Form de seleção de especialidade-->
-                    <form>
-                        <label for="especialidade">Qual a sua especialidade?</label><br>
-                        <select id="especialidade" name="especialidade">
+                    <div class="campo">
+                        <label for="especialidade" class="label-especialidade">Qual a sua especialidade? *</label><br>
+                        
+                        <select id="especialidade" name="especialidade" required>
                             <option value="">--Escolha uma opção--</option>
                             <option value="acupuntura">Acupuntura</option>
                             <option value="fisio-aquatica">Fisioterapia Aquática</option>
@@ -69,18 +85,90 @@
                             <option value="osteopatia">Osteopatia</option>
                             <option value="quiropraxia">Quiropraxia</option>
                         </select>
-                    </form>
-                    
+                    </div>
+
+                    <div class="campo">
+                        <label for="biografia">Biografia *</label>
+                        <textarea id="biografia" name="biografia" rows="5" cols="40" minlength="500" placeholder="Escreva sobre você e suas especialidades." required></textarea>
+                    </div>
+
+                    <div class="cadastrar">
+                        <button type="submit">Cadastrar</button>
+                    </div>                    
                 </form>
 
-                <form>
-                    <!--Cadastro do paciente-->
-                                    
+                <!--Form do paciente-->
+                <form id="form-paciente" class="formulario" hidden required>
+                    <div class="campo">
+                        <label for="nome">Nome completo *</label>
+                        <input type="text" id="nome-paciente" name="nome-paciente" placeholder="Digite seu nome completo" required>
+                         
+                    </div>
+
+                    <div class="campo">
+                        <label for="cpf">CPF *</label>
+                        <input type="text" id="cpf" name="cpf" placeholder="Digite seu CPF" maxlength="14" inputmode="numeric" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="dt-nascimento">Data de Nascimento</label>
+                        <input type="text" id="dt-nascimento" name="dt-nascimento" placeholder="DD/MM/AAAA" maxlength="10" autocomplete="bday" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="genero" class="genero">Gênero *</label><br>
+                        <select id="genero" name="genero">
+                            <option value="feminino">Feminino</option>
+                            <option value="masculino">Masculino</option>
+                            <option value="naoDizer">Prefiro não dizer</option>
+                        </select>
+                    </div>
+
+                    <div class="campo">
+                        <label for="cns" class="cns">CNS (Carteira Nacional de Saúde)</label>
+                        <input type="text" id="cns" name="cns" placeholder="Digite os 15 números do seu CNS" maxlength="15"
+                        inputmode="numeric">
+                    </div>
+
+                    <div class="campo">
+                        <label for="email">E-mail *</label>
+                        <input type="email" id="email-paciente" name="email-paciente" placeholder="exemplo@exemplo.com" required>
+                        
+                    </div>
+
+                    <div class="campo">
+                        <label for="senha">Senha *</label>
+                        <input type="password" id="senha" name="senha" placeholder="Mínimo 8 caracteres" minlength="8">
+
+                        <small class="info-senha">A senha deve conter: </small>
+                        <ul class="requisito-senha">
+                            <li id="tamanho">Pelo menos 8 caracteres</li>
+                            <li id="numero">Um número</li>
+                            <li id="maiuscula">Uma letra maiúscula</li>
+                            <li id="minuscula">Uma letra minúscula</li>
+                            <li id="especial">Um caractere especial (!@#$%)</li>
+                    </ul>
+                    </div>
+
+                    <div class="cadastrar">
+                        <button type="submit">Cadastrar</button>
+                    </div>  
                 </form>
+
+                <div class="divisor">ou</div>
+                
+                <p class="possui-conta">Já possui uma conta? <a href=login.html>Faça login</a></p>
+                <div>
+
+                </div>
 
             </div>
         </section>
     </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/air-datepicker@3.6.0/air-datepicker.js"></script>
+    <script src="../js/cadastro.js"></script>
+    
 </body>
 
 

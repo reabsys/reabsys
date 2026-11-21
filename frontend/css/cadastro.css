@@ -44,6 +44,7 @@ body {
 .abas{
     display: flex;
     flex-direction: row;
+    margin-bottom: 10px;;
     width: 100%;
     background-color: #349469;
     border: none;
@@ -65,14 +66,20 @@ body {
 }
 
 .abas button.ativa{
-    background-color: #349469;
+    background-color: #61be94;
     color: #ffffff;
-    border-bottom: 5px solid #349469;
+    border-bottom: 5px solid #00843d;
+    border-top-right-radius: 20px;
 }
 
 .abas button:not(.ativa):hover{
     background-color: #dcffef;
     color: #00843d;
+    border-top-left-radius: 20px;
+}
+
+.formulario[hidden] {
+    display: none;
 }
 
 .div-cadastro{
@@ -134,18 +141,171 @@ body {
     flex-direction: column;
     gap: 6px;
     width: 100%;
-    cursor: pointer;
     box-sizing: border-box;
-    padding: 14px 44px 14px 18px;
+    padding: 14px 10px 14px 18px;
+    cursor: pointer;
     font-family: 'Poppins', sans-serif;
     font-size: 14px;
     color: #333;
     background-color: #fff;
     border: 2px solid #2e9e6b;
     border-radius: 10px;
-    transition: box-shadow 0.2s ease, border-color 0.2s ease;
+    transition: box-shadow 0.2s ease, border-color 0.2s ease;    
 }
 
-select option:hover {
-    background-color: #cdeedd;
+#biografia{
+    width: 100%;
+    height: 100px;
+}
+
+.cadastrar{
+    margin-left: 120px;
+}
+
+.cadastrar button{
+    width: 80%;
+    height: 52px;    
+    margin-top: 5px;
+    border: none;
+    border-radius: 30px;
+    background-color: #349469;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    background-color: #26704f;
+}
+
+
+/* Personalização do calendário Air Datepicker */
+.air-datepicker {
+    --adp-accent-color: #349469;
+    --adp-background-color: #ffffff;
+    --adp-color: #333333;
+    --adp-color-secondary: #777777;
+    --adp-border-color: #e0e0e0;
+    --adp-border-radius: 12px;
+    --adp-cell-border-radius: 8px;
+    --adp-day-name-color: #349469;
+    --adp-day-name-color-hover: #26704f;
+    --adp-cell-background-color-selected: #349469;
+    --adp-cell-background-color-selected-hover: #26704f;
+    --adp-cell-background-color-hover: #dcffef;
+}
+
+/* Cabeçalho do calendário */
+.air-datepicker-nav {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+/* Título do mês e ano */
+.air-datepicker-nav--title {
+    color: #26704f;
+    font-weight: 600;
+}
+
+/* Dias da semana */
+.air-datepicker-body--day-name {
+    color: #349469;
+    font-weight: 600;
+}
+
+/* Dia selecionado */
+.air-datepicker-cell.-selected- {
+    background-color: #349469;
+    color: white;
+}
+
+/* Dia ao passar o mouse */
+.air-datepicker-cell:not(.-selected-):hover {
+    background-color: #dcffef;
+    color: #26704f;
+}
+
+/* Botões de navegação */
+.air-datepicker-nav--action:hover {
+    background-color: #dcffef;
+}
+
+/* Dia atual */
+.air-datepicker-cell.-current- {
+    color: #349469;
+    font-weight: 700;
+}
+
+#genero{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 14px 10px 14px 18px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: #333;
+    background-color: #fff;
+    border: 2px solid #2e9e6b;
+    border-radius: 10px;
+    transition: box-shadow 0.2s ease, border-color 0.2s ease;    
+}
+
+.info-senha{
+    font-size: 12px;
+    font-weight: 600;
+    color: #00843d;
+}
+
+.requisito-senha{
+    font-size: 13px;
+}
+
+ul{
+    list-style-type: circle;
+}
+
+li::marker{
+    color: #00843d;
+}
+
+.divisor {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #666;           
+  margin: 16px 0;        
+  font-size: 15px;
+}
+.divisor::before,
+.divisor::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid #ccc;
+}
+
+.divisor::before,
+.divisor::after {
+  margin-right: 12px;
+  margin-left: 12px;
+}
+
+p{
+    margin-top: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #173c3c;
+}
+
+p a {
+    color: #00843d;
+    text-decoration: none;
+    font-weight: 600;;
+}
+p a:hover {
+    text-decoration: underline;
 }
