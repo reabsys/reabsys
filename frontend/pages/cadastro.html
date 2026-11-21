@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro | ReabSYS</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/air-datepicker@3.6.0/air-datepicker.css">
+    <link rel="stylesheet" href="../css/cadastro.css">
+    <link rel="icon" type="image/png" href="../assets/images/logo/ReabSYS_iconeVerde.png">
+
+</head>
+
+<body>
+    <main>
+        <section class="cadastro-section">
+            <div class="div-cadastro">
+                <div class="titulo-cadastro">
+                    <div class="logoReabSYS">
+                        <img src="../assets/images/logo/ReabSYS_completa2.png" alt="Logo ReabSYS">
+                    </div>
+
+                    <h1>Crie sua conta</h1>
+                    <p>Escolha seu perfil e preencha os dados para começar.</p>
+                </div>
+                <div class="abas">
+                    <button type="button" class="aba ativa" data-form="form-fisio">Fisioterapeuta</button>
+                    <button type="button" class="aba" data-form="form-paciente">Paciente</button>
+                </div>
+
+                <!--Form do fisioterapeuta-->
+                <form id="form-fisio" class="formulario">
+
+                    <div class="campo">
+                        <label for="nome">Nome completo *</label>
+                        <input type="text" id="nome-fisio" name="nome-fisio" placeholder="Digite seu nome completo"
+                            required>
+
+                    </div>
+
+                    <div class="campo">
+                        <label for="CREFITO">CREFITO *</label>
+                        <input type="text" id="CREFITO" name="CREFITO" placeholder="Digite seu CREFITO" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="email">E-mail *</label>
+                        <input type="email" id="email-fisio" name="email-fisio" placeholder="exemplo@exemplo.com"
+                            required>
+
+                    </div>
+
+                    <div class="campo">
+                        <label for="senha">Senha *</label>
+                        <input type="password" id="senha" name="senha" placeholder="Mínimo 6 caracteres" minlength="8"
+                            required>
+
+                        <small class="info-senha">A senha deve conter: </small>
+                        <ul class="requisito-senha">
+                            <li id="tamanho">Pelo menos 8 caracteres</li>
+                            <li id="numero">Um número</li>
+                            <li id="maiuscula">Uma letra maiúscula</li>
+                            <li id="minuscula">Uma letra minúscula</li>
+                            <li id="especial">Um caractere especial (!@#$%)</li>
+                        </ul>
+                    </div>
+
+                    <!--Form de seleção de especialidade-->
+                    <div class="campo">
+                        <label for="especialidade" class="label-especialidade">Qual a sua especialidade? *</label><br>
+
+                        <select id="especialidade" name="especialidade" required>
+                            <option value="">--Escolha uma opção--</option>
+                            <option value="acupuntura">Acupuntura</option>
+                            <option value="fisio-aquatica">Fisioterapia Aquática</option>
+                            <option value="fisio-cardio">Fisioterapia Cardiovascular</option>
+                            <option value="fisio-dermato">Fisioterapia Dermatofuncional</option>
+                            <option value="fisio-trabalho">Fisioterapia do Trabalho</option>
+                            <option value="fisio-geronto">Fisioterapia em Gerontologia</option>
+                            <option value="fisio-oncologia">Fisioterapia em Oncologia</option>
+                            <option value="fisio-reumeto">Fisioterapia em Reumatologia</option>
+                            <option value="fisio-mulher">Fisioterapia em Saúde da Mulher</option>
+                            <option value="fisio-intensiva">Fisioterapia em Terapia Intensiva</option>
+                            <option value="fisio-neonato-pediatria">Fisioterapia em Terapia Intensiva (Neonatologia e
+                                Pediatria)</option>
+                            <option value="fisio-esporte">Fisioterapia Esportiva</option>
+                            <option value="fisio-neuro">Fisioterapia Neurofuncional</option>
+                            <option value="fisio-respiratoria">Fisioterapia Respiratória</option>
+                            <option value="fisio-traumo-orto">Fisioterapia Traumato-Ortopédica</option>
+                            <option value="osteopatia">Osteopatia</option>
+                            <option value="quiropraxia">Quiropraxia</option>
+                        </select>
+                    </div>
+
+                    <div class="campo">
+                        <label for="biografia">Biografia *</label>
+                        <textarea id="biografia" name="biografia" rows="5" cols="40"
+                            placeholder="Escreva sobre você e suas especialidades." required></textarea>
+                    </div>
+
+                    <div class="cadastrar">
+                        <button type="submit">Cadastrar</button>
+                    </div>
+                </form>
+
+                <!--Form do paciente-->
+                <form id="form-paciente" class="formulario" hidden required>
+                    <div class="campo">
+                        <label for="nome">Nome completo *</label>
+                        <input type="text" id="nome-paciente" name="nome-paciente"
+                            placeholder="Digite seu nome completo" required>
+
+                    </div>
+
+                    <div class="campo">
+                        <label for="cpf">CPF *</label>
+                        <input type="text" id="cpf" name="cpf" placeholder="Digite seu CPF" maxlength="14"
+                            inputmode="numeric" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="dt-nascimento">Data de Nascimento</label>
+                        <input type="text" id="dt-nascimento" name="dt-nascimento" placeholder="DD/MM/AAAA"
+                            maxlength="10" autocomplete="bday" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="genero" class="genero">Gênero *</label><br>
+                        <select id="genero" name="genero">
+                            <option value="feminino">Feminino</option>
+                            <option value="masculino">Masculino</option>
+                            <option value="naoDizer">Prefiro não dizer</option>
+                        </select>
+                    </div>
+
+                    <div class="campo">
+                        <label for="cns" class="cns">CNS (Carteira Nacional de Saúde)</label>
+                        <input type="text" id="cns" name="cns" placeholder="Digite os 15 números do seu CNS"
+                            maxlength="15" inputmode="numeric">
+                    </div>
+
+                    <div class="campo">
+                        <label for="email">E-mail *</label>
+                        <input type="email" id="email-paciente" name="email-paciente" placeholder="exemplo@exemplo.com"
+                            required>
+
+                    </div>
+
+                    <div class="campo">
+                        <label for="senha">Senha *</label>
+                        <input type="password" id="senha" name="senha" placeholder="Mínimo 8 caracteres" minlength="8">
+
+                        <small class="info-senha">A senha deve conter: </small>
+                        <ul class="requisito-senha">
+                            <li id="tamanho">Pelo menos 8 caracteres</li>
+                            <li id="numero">Um número</li>
+                            <li id="maiuscula">Uma letra maiúscula</li>
+                            <li id="minuscula">Uma letra minúscula</li>
+                            <li id="especial">Um caractere especial (!@#$%)</li>
+                        </ul>
+                    </div>
+
+                    <div class="cadastrar">
+                        <button type="submit">Cadastrar</button>
+                    </div>
+                </form>
+
+                <div class="divisor">ou</div>
+
+                <p class="possui-conta">Já possui uma conta? <a href=login.html>Faça login</a></p>
+                <div>
+
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/air-datepicker@3.6.0/air-datepicker.js"></script>
+    <script src="../js/cadastro.js"></script>
+
+</body>
+
+
+</html>

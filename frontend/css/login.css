@@ -11,12 +11,13 @@ body {
 }
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #c8d3bd;
+    background-color: #e0e0e0;
 }
 
 
 .login-section {
     min-height: 100vh;
+    min-height: 100dvh;
 
     display: flex;
     justify-content: center;
@@ -25,9 +26,9 @@ body {
     padding: 30px 20px;
 }
 
-
 .login-div {
-    width: 400px;
+    width: 100%;
+    max-width: 400px;
 
     padding: 30px 40px;
 
@@ -88,7 +89,7 @@ h1 {
 
     padding: 0 18px;
 
-    border: 2px solid #00843d;
+    border: 2px solid #349469;
     border-radius: 10px;
 
     outline: none;
@@ -106,7 +107,7 @@ h1 {
 }
 
 .campo input:focus {
-    border-color: #006f34;
+    border-color: #349469;
 
     box-shadow: 0 0 0 3px rgba(0, 132, 61, 0.10);
 }
@@ -121,7 +122,7 @@ button {
     border: none;
     border-radius: 30px;
 
-    background-color: #00843d;
+    background-color: #349469;
 
     color: white;
 
@@ -135,7 +136,7 @@ button {
 }
 
 button:hover {
-    background-color: #006f34;
+    background-color: #26704f;
 }
 
 
@@ -159,5 +160,84 @@ button:hover {
 
 .cadastro a:hover {
     text-decoration: underline;
+}
+
+.campo-senha {
+    position: relative;
+}
+
+.campo-senha input {
+    padding-right: 52px;
+}
+
+.mensagem-erro {
+    min-height: 20px;
+    margin: 0 0 8px;
+
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 20px;
+    text-align: center;
+
+    color: #b3261e;
+}
+
+.campo .toggle-senha,
+.campo .toggle-senha:hover {
+    position: absolute;
+    top: 50%;
+    right: 14px;
+    transform: translateY(-50%);
+
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 4px;
+
+    display: flex;
+    align-items: center;
+
+    background: none;
+    border: none;
+    border-radius: 6px;
+
+    color: #349469;
+    cursor: pointer;
+}
+
+.campo .toggle-senha:hover {
+    color: #26704f;
+}
+
+.campo .toggle-senha:focus-visible {
+    outline: 2px solid #349469;
+}
+
+.demo-aviso {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+
+    margin-top: 18px;
+    padding: 12px 14px;
+
+    border: 1px dashed #349469;
+    border-radius: 10px;
+    background-color: #f2f7ee;
+
+    text-align: center;
+    font-size: 13px;
+    color: #173c3c;
+}
+
+.demo-aviso strong {
+    margin-bottom: 4px;
+
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+
+    color: #00843d;
 }
 

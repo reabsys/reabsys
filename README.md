@@ -1,3 +1,5 @@
+<img src="frontend/assets/images/logo/ReabSYS_completa2.png" width="700">
+
 #  ReabSYS - Plataforma de Acompanhamento Fisioterapêutico
 
 

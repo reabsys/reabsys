@@ -7,8 +7,7 @@
 
     <link rel="stylesheet" href="../css/login.css">
 
-    <link rel="icon" type="image/png"
-        href="../assets/images/logo/ReabSYS_iconeBranco.png">
+    <link rel="icon" type="image/png" href="../assets/images/logo/ReabSYS_iconeVerde.png">
 
     <title>Login | ReabSYS</title>
 </head>
@@ -21,8 +20,7 @@
             <div class="login-div">
 
                 <div class="logoReabSYS">
-                    <img src="../assets/images/logo/logo_ReabSYS_inteiraVerde.png"
-                        alt="Logo ReabSYS">
+                    <img src="../assets/images/logo/ReabSYS_completa2.png" alt="Logo ReabSYS">
                 </div>
 
                 <h1>Entrar</h1>
@@ -32,23 +30,13 @@
                     <div class="campo">
                         <label for="CREFITO">CREFITO *</label>
 
-                        <input
-                            type="text"
-                            id="CREFITO"
-                            name="CREFITO"
-                            placeholder="Digite seu CREFITO"
-                            required>
+                        <input type="text" id="CREFITO" name="CREFITO" placeholder="Digite seu CREFITO" required>
                     </div>
 
                     <div class="campo">
                         <label for="senha">Senha *</label>
 
-                        <input
-                            type="password"
-                            id="senha"
-                            name="senha"
-                            placeholder="Digite sua senha"
-                            required>
+                        <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
                     </div>
 
                     <button type="submit">Entrar</button>
@@ -57,14 +45,21 @@
 
                 <p class="cadastro">
                     Não tem uma conta?
-                    <a href="#">Cadastre-se</a>
+                    <a href="pages/cadastro.html">Cadastre-se</a>
                 </p>
+
+                <div class="demo-aviso">
+                    <strong>Versão demonstrativa</strong>
+                    <span>CREFITO: <b>123456-F</b></span>
+                    <span>Senha: <b>123456</b></span>
+                </div>
 
             </div>
 
         </section>
     </main>
 
+    <script src="../js/login.js"></script>
 </body>
 
 </html>
