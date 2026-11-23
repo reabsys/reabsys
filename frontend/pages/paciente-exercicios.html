@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../assets/images/logo/ReabSYS_iconeVerde.png">
+    <title>ReabSYS - Meus exercícios</title>
+
+    <link rel="stylesheet" href="../css/fisiomenu.css">
+    <link rel="stylesheet" href="../css/paciente-exercicios.css">
+    <script src="../js/menu-dados.js" defer></script>
+    <script src="../js/paciente-dados.js" defer></script>
+    <script src="../js/paciente-exercicios.js" defer></script>
+</head>
+
+<body>
+
+    <a class="paciente-exercicios-atalho" href="#paciente-exercicios-conteudo">Pular para o conteúdo</a>
+    <aside class="sidebar">
+        <div class="sidebar-top">
+            <div class="sidebar-logo">
+                <a href="paciente-exercicios.html">
+                    <img src="../assets/images/logo/ReabSYS_iconeBranco.png" alt="ReabSYS">
+                </a>
+            </div>
+
+            <nav class="sidebar-nav" aria-label="Menu do paciente">
+                <a href="paciente-exercicios.html" class="nav-item active" aria-current="page">
+                    <i data-lucide="dumbbell"></i>
+                    <span>Meus exercícios</span>
+                </a>
+
+                <a href="paciente-registro.html" class="nav-item">
+                    <i data-lucide="clipboard-list"></i>
+                    <span>Enviar registro</span>
+                </a>
+
+                <a href="paciente-agenda.html" class="nav-item">
+                    <i data-lucide="calendar-days"></i>
+                    <span>Agenda</span>
+                </a>
+
+                <a href="paciente-evolucao.html" class="nav-item">
+                    <i data-lucide="chart-no-axes-combined"></i>
+                    <span>Minha evolução</span>
+                </a>
+            </nav>
+        </div>
+
+        <div class="sidebar-bottom">
+            <a href="paciente-perfil.html" class="nav-item">
+                <i data-lucide="circle-user-round"></i>
+                <span>Perfil</span>
+            </a>
+        </div>
+    </aside>
+
+    <main class="main-content paciente-exercicios" id="paciente-exercicios-conteudo">
+        <header class="paciente-exercicios-cabecalho">
+            <p class="paciente-exercicios-chamada" id="paciente-exercicios-saudacao">Área do paciente</p>
+            <h1>Meus exercícios</h1>
+            <p>Os exercícios atribuídos pelo seu fisioterapeuta.</p>
+        </header>
+
+        <noscript>Ative o JavaScript para utilizar as funcionalidades.</noscript>
+        <p id="paciente-exercicios-acesso" role="status" hidden>Acesse como paciente para consultar seus exercícios.</p>
+        <p id="paciente-exercicios-erro" role="alert" hidden>Não foi possível ler seus exercícios neste navegador.</p>
+
+        <section class="panel" id="paciente-exercicios-painel" aria-label="Exercícios atribuídos" hidden>
+            <div class="paciente-exercicios-vazio" id="paciente-exercicios-vazio" hidden>
+                <strong>Seu plano está sendo preparado</strong>
+                <p>Assim que o fisioterapeuta atribuir exercícios, eles aparecerão aqui.</p>
+            </div>
+            <div id="paciente-exercicios-lista"></div>
+
+            <details class="paciente-exercicios-creditos">
+                <summary>Créditos das imagens</summary>
+                <p>Fotografias convertidas para WebP e dimensionadas para os cartões.</p>
+                <ul>
+                    <li><a href="https://commons.wikimedia.org/wiki/File:Glute-bridge.png">Ponte glútea</a> — Marianne Gilbak,
+                        <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.</li>
+                    <li><a href="https://www.pexels.com/photo/woman-leaning-on-the-wall-with-a-ball-6740055/">Agachamento na parede</a> — Mikhail Nilov,
+                        <a href="https://www.pexels.com/license/">Licença Pexels</a>.</li>
+                    <li><a href="https://commons.wikimedia.org/wiki/File:Straight_Leg_Raise_Exercise.jpeg">Elevação de perna estendida</a> — Fruityfruit,
+                        <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>.</li>
+                    <li><a href="https://commons.wikimedia.org/wiki/File:Wshamstringstretch.jpg">Alongamento de isquiotibiais</a> — Richardkiwi, Wikipédia em neerlandês,
+                        <a href="https://creativecommons.org/licenses/by/2.5/nl/">CC BY 2.5 NL</a>.</li>
+                    <li><a href="https://commons.wikimedia.org/wiki/File:Plankphoto.JPG">Prancha abdominal</a> — Crossfit girl,
+                        <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>.</li>
+                    <li><a href="https://doi.org/10.3390/s150102181">Pêndulo de Codman</a> — Hsueh-Chun Lin, Shu-Yin Chiang,
+                        Kai Lee e Yao-Chiang Kan, <i>Sensors</i> (2015). Recorte do painel 2 da figura 2,
+                        <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</li>
+                </ul>
+            </details>
+        </section>
+    </main>
+
+    <template id="paciente-exercicios-modelo">
+        <article class="paciente-exercicios-cartao">
+            <div class="paciente-exercicios-midia">
+                <img loading="lazy" alt="">
+                <p hidden>Foto indisponível para este exercício</p>
+            </div>
+            <div class="paciente-exercicios-detalhes">
+                <h2></h2>
+                <p></p>
+                <a href="paciente-registro.html">Enviar registro</a>
+            </div>
+        </article>
+    </template>
+    <script src="https://unpkg.com/lucide@latest" async onload="lucide.createIcons()"></script>
+</body>
+
+</html>
