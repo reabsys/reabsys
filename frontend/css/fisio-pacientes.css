@@ -1,0 +1,130 @@
+.fisio-pacientes {
+    max-width: 1280px;
+}
+
+.fisio-pacientes .dashboard-header {
+    height: auto;
+    margin-bottom: 18px;
+}
+
+.fisio-pacientes-colunas {
+    display: grid;
+    grid-template-columns: minmax(280px, 360px) minmax(0, 1fr);
+    align-items: start;
+    gap: 16px;
+}
+
+.fisio-pacientes .panel {
+    min-width: 0;
+    padding: 18px;
+}
+
+.fisio-pacientes .panel h2 {
+    margin-bottom: 12px;
+    font-size: 18px;
+}
+
+.fisio-pacientes label {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 13px;
+}
+
+.fisio-pacientes input,
+.fisio-pacientes select {
+    width: 100%;
+    padding: 8px 10px;
+    margin-bottom: 12px;
+    border: 1px solid #aab8ad;
+    border-radius: 6px;
+    background: #fff;
+    color: #222;
+    font: inherit;
+    font-size: 14px;
+}
+
+.fisio-pacientes-filtros {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 100px;
+    gap: 12px;
+    align-items: end;
+}
+
+.fisio-pacientes-acoes,
+.fisio-pacientes-resumo {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+}
+
+.fisio-pacientes-acoes {
+    margin-top: 8px;
+}
+
+.fisio-pacientes button {
+    padding: 6px 12px;
+    border: 1px solid #aab8ad;
+    border-radius: 6px;
+    background: #fff;
+    font: inherit;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+#fisio-pacientes-salvar {
+    border-color: #23754e;
+    background: #23754e;
+    color: #fff;
+}
+
+.fisio-pacientes a {
+    color: #216644;
+}
+
+.fisio-pacientes-excluir,
+#fisio-pacientes-erro {
+    color: #9c2929;
+}
+
+#fisio-pacientes-erro {
+    margin-bottom: 12px;
+}
+
+#fisio-pacientes-contagem,
+.fisio-pacientes-ficha {
+    font-size: 13px;
+    color: #444;
+}
+
+.fisio-pacientes-ficha {
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid #dbe3db;
+    overflow-wrap: anywhere;
+}
+
+.fisio-pacientes-resumo {
+    justify-content: space-between;
+    margin-bottom: 4px;
+}
+
+.fisio-pacientes-resumo h3 {
+    color: #222;
+    font-size: 15px;
+}
+
+.fisio-pacientes-situacao {
+    font-size: 12px;
+}
+
+@media (max-width: 760px) {
+    .fisio-pacientes-colunas,
+    .fisio-pacientes-filtros {
+        grid-template-columns: 1fr;
+    }
+
+    .fisio-pacientes-filtros {
+        gap: 0;
+    }
+}

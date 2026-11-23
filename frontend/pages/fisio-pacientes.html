@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../assets/images/logo/ReabSYS_iconeVerde.png">
+    <title>ReabSYS - Pacientes</title>
+
+    <link rel="stylesheet" href="../css/fisiomenu.css">
+    <link rel="stylesheet" href="../css/fisio-pacientes.css">
+    <script src="../js/menu-dados.js" defer></script>
+    <script src="../js/fisio-pacientes.js" defer></script>
+</head>
+
+<body>
+
+    <aside class="sidebar">
+        <div class="sidebar-top">
+            <div class="sidebar-logo">
+                <a href="../index.html">
+                    <img src="../assets/images/logo/ReabSYS_iconeBranco.png" alt="ReabSYS">
+                </a>
+            </div>
+
+            <nav class="sidebar-nav" aria-label="Menu do fisioterapeuta">
+                <a href="fisiomenu.html" class="nav-item">
+                    <i data-lucide="house"></i>
+                    <span>Início</span>
+                </a>
+
+                <a href="fisio-pacientes.html" class="nav-item active" aria-current="page">
+                    <i data-lucide="users"></i>
+                    <span>Pacientes</span>
+                </a>
+
+                <a href="fisio-agenda.html" class="nav-item">
+                    <i data-lucide="calendar-days"></i>
+                    <span>Agenda</span>
+                </a>
+
+                <a href="fisio-planos.html" class="nav-item">
+                    <i data-lucide="clipboard-list"></i>
+                    <span>Planos</span>
+                </a>
+
+                <a href="fisio-exercicios.html" class="nav-item">
+                    <i data-lucide="dumbbell"></i>
+                    <span>Exercícios</span>
+                </a>
+
+                <a href="fisio-evolucao.html" class="nav-item">
+                    <i data-lucide="chart-no-axes-combined"></i>
+                    <span>Evolução</span>
+                </a>
+            </nav>
+        </div>
+
+        <div class="sidebar-bottom">
+            <a href="fisio-perfil.html" class="nav-item">
+                <i data-lucide="circle-user-round"></i>
+                <span>Perfil</span>
+            </a>
+        </div>
+    </aside>
+
+    <main class="main-content fisio-pacientes">
+        <header class="dashboard-header">
+            <h1>Pacientes</h1>
+        </header>
+
+        <noscript>Ative o JavaScript para consultar suas fichas.</noscript>
+        <p id="fisio-pacientes-acesso" hidden>Entre com seu CREFITO para acessar as fichas. <a href="login.html">Abrir login</a></p>
+        <p id="fisio-pacientes-erro" role="alert" hidden></p>
+
+        <div id="fisio-pacientes-conteudo" hidden>
+            <div class="fisio-pacientes-colunas">
+                <section class="panel">
+                    <h2 id="fisio-pacientes-titulo">Novo paciente</h2>
+                    <form id="fisio-pacientes-form">
+                        <label for="fisio-pacientes-nome">Nome completo</label>
+                        <input type="text" id="fisio-pacientes-nome" name="nome" minlength="3" maxlength="100" required>
+
+                        <label for="fisio-pacientes-email">E-mail</label>
+                        <input type="email" id="fisio-pacientes-email" name="email" maxlength="120" required>
+
+                        <label for="fisio-pacientes-telefone">Telefone com DDD (opcional)</label>
+                        <input type="tel" id="fisio-pacientes-telefone" name="telefone" maxlength="25">
+
+                        <label for="fisio-pacientes-acompanhamento">Acompanhamento</label>
+                        <input type="text" id="fisio-pacientes-acompanhamento" name="acompanhamento" minlength="3" maxlength="160" required>
+
+                        <label for="fisio-pacientes-situacao">Situação</label>
+                        <select id="fisio-pacientes-situacao" name="situacao">
+                            <option value="ativo">Ativo</option>
+                            <option value="inativo">Inativo</option>
+                        </select>
+
+                        <div class="fisio-pacientes-acoes">
+                            <button type="submit" id="fisio-pacientes-salvar">Adicionar paciente</button>
+                            <button type="button" id="fisio-pacientes-cancelar" hidden>Cancelar edição</button>
+                        </div>
+                    </form>
+                </section>
+
+                <section class="panel">
+                    <h2>Seus pacientes</h2>
+                    <div class="fisio-pacientes-filtros">
+                        <div>
+                            <label for="fisio-pacientes-busca">Buscar por nome, e-mail ou acompanhamento</label>
+                            <input type="search" id="fisio-pacientes-busca">
+                        </div>
+                        <div>
+                            <label for="fisio-pacientes-filtro">Situação</label>
+                            <select id="fisio-pacientes-filtro">
+                                <option value="">Todos</option>
+                                <option value="ativo">Ativos</option>
+                                <option value="inativo">Inativos</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <p id="fisio-pacientes-contagem" role="status"></p>
+                    <div id="fisio-pacientes-lista"></div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <template id="fisio-pacientes-modelo">
+        <article class="fisio-pacientes-ficha">
+            <div class="fisio-pacientes-resumo">
+                <h3></h3>
+                <span class="fisio-pacientes-situacao"></span>
+            </div>
+            <p class="fisio-pacientes-acompanhamento"></p>
+            <p class="fisio-pacientes-email"></p>
+            <p class="fisio-pacientes-telefone"></p>
+            <div class="fisio-pacientes-acoes">
+                <button type="button" class="fisio-pacientes-editar">Editar</button>
+                <button type="button" class="fisio-pacientes-excluir">Excluir</button>
+                <a href="fisio-agenda.html">Agendar sessão</a>
+            </div>
+        </article>
+    </template>
+
+    <script src="https://unpkg.com/lucide@latest" async onload="lucide.createIcons()"></script>
+</body>
+
+</html>
