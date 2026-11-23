@@ -1,0 +1,288 @@
+.fisio-agenda {
+    max-width: 1800px;
+    color: #20382d;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.fisio-agenda-cabecalho,
+.fisio-agenda-resumo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.fisio-agenda-cabecalho {
+    margin-bottom: 22px;
+}
+
+.fisio-agenda-cabecalho h1 {
+    font-size: 26px;
+}
+
+.fisio-agenda-chamada {
+    margin-bottom: 8px;
+    color: #216747;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+}
+
+.fisio-agenda-colunas {
+    display: grid;
+    grid-template-columns: minmax(270px, 350px) minmax(0, 1fr);
+    align-items: start;
+    gap: 24px;
+}
+
+.fisio-agenda .panel {
+    min-width: 0;
+    padding: 23px;
+    border: 1px solid #dde6d8;
+    border-radius: 16px;
+    box-shadow: 0 3px 12px #233a2410;
+}
+
+.fisio-agenda-agendamento {
+    position: sticky;
+    top: 24px;
+}
+
+.fisio-agenda h2 {
+    margin-bottom: 12px;
+    font-size: 18px;
+}
+
+.fisio-agenda label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.fisio-agenda input,
+.fisio-agenda select {
+    width: 100%;
+    min-width: 0;
+    min-height: 44px;
+    margin-bottom: 16px;
+    padding: 10px 12px;
+    border: 1px solid #c7d5c3;
+    border-radius: 8px;
+    background: #fff;
+    color: inherit;
+    font: inherit;
+    font-size: 13px;
+}
+
+#fisio-agenda-duracao {
+    margin-bottom: 4px;
+}
+
+.fisio-agenda-ajuda,
+.fisio-agenda small {
+    display: block;
+    margin-bottom: 16px;
+    color: #617067;
+    font-size: 11px;
+}
+
+.fisio-agenda a {
+    color: #216747;
+}
+
+.fisio-agenda-botao {
+    padding: 10px 16px;
+    border: 1px solid #ceddc8;
+    border-radius: 9px;
+    background: #f0f6ed;
+    color: #216747;
+    font: inherit;
+    font-size: 13px;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#fisio-agenda-agendar {
+    width: 100%;
+    color: #fff;
+    background: #216747;
+}
+
+#fisio-agenda-agendar:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+
+.fisio-agenda-perigo {
+    border-color: #efd4d2;
+    background: #fff3f2;
+    color: #a62f35;
+}
+
+.fisio-agenda-filtros {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 145px 145px;
+    gap: 12px;
+}
+
+.fisio-agenda-resumo {
+    color: #617067;
+    font-size: 12px;
+}
+
+#fisio-agenda-limpar {
+    background: transparent;
+    border: 0;
+}
+
+#fisio-agenda-vazio,
+.fisio-agenda-sessao {
+    margin-top: 14px;
+    border-radius: 12px;
+}
+
+#fisio-agenda-vazio {
+    padding: 32px 15px;
+    background: #f8faf5;
+    font-size: 13px;
+    text-align: center;
+}
+
+.fisio-agenda-sessao {
+    display: flex;
+    gap: 18px;
+    padding: 18px;
+    border: 1px solid #e1e9df;
+}
+
+.fisio-agenda-dia {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-self: start;
+    flex-shrink: 0;
+    width: 64px;
+    min-height: 75px;
+    border-radius: 10px;
+    background: #f0f5ed;
+    color: #216747;
+    font-size: 11px;
+    text-align: center;
+}
+
+.fisio-agenda-dia strong {
+    font-size: 25px;
+    line-height: 1.2;
+}
+
+.fisio-agenda-detalhes {
+    flex: 1;
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+.fisio-agenda-detalhes h3 {
+    color: #20382d;
+    font-size: 15px;
+}
+
+.fisio-agenda-situacao {
+    padding: 3px 9px;
+    border-radius: 20px;
+    background: #fff1d5;
+    color: #7a570a;
+    font-size: 11px;
+}
+
+.fisio-agenda-situacao[data-situacao="concluida"] {
+    background: #e5f3e7;
+    color: #21653d;
+}
+
+.fisio-agenda-situacao[data-situacao="cancelada"] {
+    background: #f0f0ee;
+    color: #65655d;
+}
+
+.fisio-agenda-acoes:not([hidden]) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 14px;
+}
+
+.fisio-agenda-erro {
+    padding: 12px 14px;
+    margin-bottom: 18px;
+    border: 1px solid #e9bebb;
+    border-radius: 9px;
+    background: #fff0ee;
+    color: #8b252c;
+    font-size: 12px;
+}
+
+#fisio-agenda-dialogo {
+    max-width: min(460px, calc(100% - 32px));
+    margin: auto;
+    padding: 28px;
+    border: 0;
+    border-radius: 16px;
+    color: inherit;
+}
+
+#fisio-agenda-dialogo::backdrop {
+    background: #15352480;
+}
+
+#fisio-agenda-aviso {
+    position: fixed;
+    right: 18px;
+    bottom: 18px;
+    max-width: calc(100% - 36px);
+    padding: 14px 18px;
+    border-radius: 12px;
+    background: #215638;
+    color: #fff;
+}
+
+@media (max-width: 1250px) {
+    .fisio-agenda-filtros {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .fisio-agenda-filtros > div:first-child {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 1000px) {
+    .fisio-agenda-colunas {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .fisio-agenda-agendamento {
+        position: static;
+    }
+}
+
+@media (max-width: 600px) {
+    .fisio-agenda .panel {
+        padding: 16px;
+    }
+
+    .fisio-agenda-filtros {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 0;
+    }
+
+    .fisio-agenda-sessao {
+        gap: 10px;
+        padding: 12px;
+    }
+}
