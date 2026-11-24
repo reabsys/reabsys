@@ -135,6 +135,6 @@ O ReabSYS busca tornar o acompanhamento fisioterapêutico **mais próximo, organ
 
 - **Fernando Baiocco Batista**
 - **Rogério Ferreira Passos**
-- **Tamires C. Moreira da Silva Alves**
+- **Tamires Cristina Moreira da Silva Alves**
 
 Projeto desenvolvido no curso de **Análise e Desenvolvimento de Sistemas — FATEC Ferraz de Vasconcelos**.
