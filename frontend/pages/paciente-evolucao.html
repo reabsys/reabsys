@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../assets/images/logo/ReabSYS_iconeVerde.png">
+    <title>ReabSYS - Minha evolução</title>
+
+    <link rel="stylesheet" href="../css/fisiomenu.css">
+    <link rel="stylesheet" href="../css/paciente-evolucao.css">
+    <script src="../js/menu-dados.js" defer></script>
+    <script src="../js/paciente-dados.js" defer></script>
+    <script src="../js/paciente-evolucao.js" defer></script>
+</head>
+
+<body>
+
+    <a class="paciente-evolucao-atalho" href="#paciente-evolucao-conteudo">Pular para o conteúdo</a>
+    <aside class="sidebar">
+        <div class="sidebar-top">
+            <div class="sidebar-logo">
+                <a href="paciente-exercicios.html">
+                    <img src="../assets/images/logo/ReabSYS_iconeBranco.png" alt="ReabSYS">
+                </a>
+            </div>
+
+            <nav class="sidebar-nav" aria-label="Menu do paciente">
+                <a href="paciente-exercicios.html" class="nav-item">
+                    <i data-lucide="dumbbell"></i>
+                    <span>Meus exercícios</span>
+                </a>
+
+                <a href="paciente-registro.html" class="nav-item">
+                    <i data-lucide="clipboard-list"></i>
+                    <span>Enviar registro</span>
+                </a>
+
+                <a href="paciente-agenda.html" class="nav-item">
+                    <i data-lucide="calendar-days"></i>
+                    <span>Agenda</span>
+                </a>
+
+                <a href="paciente-evolucao.html" class="nav-item active" aria-current="page">
+                    <i data-lucide="chart-no-axes-combined"></i>
+                    <span>Minha evolução</span>
+                </a>
+            </nav>
+        </div>
+
+        <div class="sidebar-bottom">
+            <a href="paciente-perfil.html" class="nav-item">
+                <i data-lucide="circle-user-round"></i>
+                <span>Perfil</span>
+            </a>
+        </div>
+    </aside>
+
+    <main class="main-content paciente-evolucao" id="paciente-evolucao-conteudo">
+        <header class="paciente-evolucao-cabecalho">
+            <p class="paciente-evolucao-chamada" id="paciente-evolucao-saudacao">Área do paciente</p>
+            <h1>Minha evolução</h1>
+            <p>Acompanhe os níveis de dor que você registrou em cada exercício.</p>
+        </header>
+
+        <noscript>Ative o JavaScript para utilizar as funcionalidades.</noscript>
+        <p id="paciente-evolucao-acesso" role="status" hidden>Acesse como paciente para consultar sua evolução.</p>
+        <p id="paciente-evolucao-erro" role="alert" hidden>Não foi possível ler seus registros neste navegador.</p>
+
+        <div id="paciente-evolucao-painel" hidden>
+            <section class="panel" aria-labelledby="paciente-evolucao-acompanhamento">
+                <h2 id="paciente-evolucao-acompanhamento">Seu acompanhamento</h2>
+                <label for="paciente-evolucao-filtro">Exercício</label>
+                <select id="paciente-evolucao-filtro" disabled>
+                    <option value="">Todos os exercícios</option>
+                </select>
+                <div id="paciente-evolucao-resumos"></div>
+                <div class="paciente-evolucao-vazio" id="paciente-evolucao-sem-registros">
+                    <strong>Seu acompanhamento começa com o primeiro registro</strong>
+                    <p>Envie um registro após realizar um exercício para acompanhar sua dor ao longo do tempo.</p>
+                </div>
+                <div id="paciente-evolucao-graficos"></div>
+            </section>
+
+            <section class="panel" aria-labelledby="paciente-evolucao-titulo-historico">
+                <h2 id="paciente-evolucao-titulo-historico">Histórico de registros</h2>
+                <div class="paciente-evolucao-vazio" id="paciente-evolucao-historico-vazio">
+                    <strong>Nenhum registro ainda</strong>
+                    <p>Seu histórico aparecerá aqui após o envio.</p>
+                </div>
+                <div id="paciente-evolucao-tabela" tabindex="0" role="region" aria-labelledby="paciente-evolucao-titulo-historico" hidden>
+                    <table>
+                        <caption>Histórico de dor do paciente conectado</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Data</th>
+                                <th scope="col">Exercício</th>
+                                <th scope="col">Dor (0–10)</th>
+                                <th scope="col">Observação</th>
+                                <th scope="col">Arquivos informados</th>
+                            </tr>
+                        </thead>
+                        <tbody id="paciente-evolucao-historico"></tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <template id="paciente-evolucao-modelo-resumo">
+        <article class="paciente-evolucao-resumo">
+            <h3></h3>
+            <p></p>
+            <p class="paciente-evolucao-comparacao"></p>
+        </article>
+    </template>
+    <script src="https://unpkg.com/lucide@latest" async onload="lucide.createIcons()"></script>
+</body>
+
+</html>

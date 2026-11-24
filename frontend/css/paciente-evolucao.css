@@ -1,0 +1,225 @@
+.paciente-evolucao {
+    max-width: 1800px;
+    padding-bottom: 30px;
+    color: #20382d;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.paciente-evolucao-atalho {
+    position: fixed;
+    top: 8px;
+    left: 8px;
+    z-index: 101;
+    padding: 10px;
+    background: #fff;
+    color: #216747;
+    transform: translateY(-180%);
+}
+
+.paciente-evolucao-atalho:focus {
+    transform: translateY(0);
+}
+
+.paciente-evolucao-cabecalho {
+    margin-bottom: 22px;
+}
+
+.paciente-evolucao-cabecalho h1 {
+    margin-bottom: 8px;
+    font-size: clamp(25px, 3vw, 32px);
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.paciente-evolucao-chamada {
+    margin-bottom: 8px;
+    color: #216747;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+    overflow-wrap: anywhere;
+}
+
+.paciente-evolucao .panel {
+    min-width: 0;
+    margin-bottom: 20px;
+    padding: 23px;
+    border: 1px solid #dde6d8;
+    border-radius: 16px;
+    box-shadow: 0 3px 12px #233a2410;
+}
+
+.paciente-evolucao .panel h2 {
+    margin-bottom: 18px;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.paciente-evolucao label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.paciente-evolucao select {
+    width: 100%;
+    min-height: 44px;
+    margin-bottom: 16px;
+    padding: 10px 12px;
+    border: 1px solid #c7d5c3;
+    border-radius: 8px;
+    background: #fff;
+    color: inherit;
+    font: inherit;
+    font-size: 13px;
+}
+
+#paciente-evolucao-resumos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.paciente-evolucao-resumo {
+    min-width: 0;
+    padding: 18px;
+    border: 1px solid #e1e9df;
+    border-radius: 12px;
+    background: #f5f8f2;
+    overflow-wrap: anywhere;
+}
+
+.paciente-evolucao-resumo h3,
+.paciente-evolucao-grafico h3 {
+    margin-bottom: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    overflow-wrap: anywhere;
+}
+
+.paciente-evolucao-comparacao {
+    margin-top: 12px;
+    color: #617067;
+    font-size: 12px;
+}
+
+#paciente-evolucao-graficos {
+    display: grid;
+    gap: 24px;
+}
+
+.paciente-evolucao-grafico {
+    min-width: 0;
+    padding-top: 18px;
+    border-top: 1px solid #e1e9df;
+}
+
+.paciente-evolucao-grafico svg {
+    display: block;
+    width: 100%;
+    height: 245px;
+}
+
+.paciente-evolucao-grafico line {
+    stroke: #e1e9df;
+}
+
+.paciente-evolucao-grafico text {
+    fill: #617067;
+    font-size: 12px;
+}
+
+.paciente-evolucao-grafico polyline {
+    fill: none;
+    stroke: #3a9468;
+    stroke-width: 2.5;
+    stroke-linejoin: round;
+}
+
+.paciente-evolucao-grafico circle {
+    fill: #216747;
+    stroke: #fff;
+    stroke-width: 2;
+}
+
+.paciente-evolucao-ajuda {
+    color: #617067;
+    font-size: 12px;
+}
+
+.paciente-evolucao-vazio {
+    padding: 32px 15px;
+    border-radius: 12px;
+    background: #f8faf5;
+    text-align: center;
+}
+
+.paciente-evolucao-vazio p {
+    margin-top: 8px;
+    color: #617067;
+    font-size: 12px;
+}
+
+#paciente-evolucao-tabela {
+    overflow-x: auto;
+}
+
+.paciente-evolucao table {
+    width: 100%;
+    min-width: 650px;
+    border-collapse: collapse;
+    font-size: 12px;
+    text-align: left;
+}
+
+.paciente-evolucao td,
+.paciente-evolucao th {
+    padding: 12px 10px;
+    border-bottom: 1px solid #e1e9df;
+    overflow-wrap: anywhere;
+}
+
+.paciente-evolucao td:first-child {
+    white-space: nowrap;
+}
+
+.paciente-evolucao th {
+    color: #617067;
+    font-weight: 500;
+}
+
+.paciente-evolucao caption {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+}
+
+#paciente-evolucao-erro,
+#paciente-evolucao-acesso {
+    padding: 12px 14px;
+    border-radius: 9px;
+    background: #fff;
+}
+
+#paciente-evolucao-erro {
+    border: 1px solid #e9bebb;
+    background: #fff0ee;
+    color: #8b252c;
+}
+
+.paciente-evolucao :focus-visible {
+    outline: 3px solid #946500;
+    outline-offset: 3px;
+}
+
+@media (max-width: 700px) {
+    .paciente-evolucao .panel {
+        padding: 19px;
+    }
+}
