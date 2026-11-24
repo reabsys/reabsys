@@ -1,0 +1,144 @@
+.paciente-agenda {
+    max-width: 1800px;
+    padding-bottom: 30px;
+    color: #20382d;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.paciente-agenda-atalho {
+    position: fixed;
+    top: 8px;
+    left: 8px;
+    z-index: 101;
+    padding: 10px;
+    background: #fff;
+    color: #216747;
+    transform: translateY(-180%);
+}
+
+.paciente-agenda-atalho:focus {
+    transform: translateY(0);
+}
+
+.paciente-agenda-cabecalho {
+    margin-bottom: 22px;
+}
+
+.paciente-agenda-cabecalho h1 {
+    margin-bottom: 8px;
+    font-size: clamp(25px, 3vw, 32px);
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.paciente-agenda-chamada {
+    margin-bottom: 8px;
+    color: #216747;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+    overflow-wrap: anywhere;
+}
+
+.paciente-agenda .panel {
+    min-width: 0;
+    margin-bottom: 20px;
+    padding: 23px;
+    border: 1px solid #dde6d8;
+    border-radius: 16px;
+    box-shadow: 0 3px 12px #233a2410;
+}
+
+.paciente-agenda .panel h2 {
+    margin-bottom: 18px;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.paciente-agenda-lista {
+    display: grid;
+    gap: 14px;
+}
+
+.paciente-agenda-consulta {
+    padding: 18px;
+    border: 1px solid #e1e9df;
+    border-radius: 12px;
+    overflow-wrap: anywhere;
+}
+
+.paciente-agenda-consulta h3 {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.paciente-agenda-detalhes {
+    margin: 12px 0;
+    color: #617067;
+    font-size: 12px;
+}
+
+.paciente-agenda-orientacao {
+    margin-bottom: 16px;
+    color: #617067;
+    font-size: 11px;
+}
+
+.paciente-agenda-situacao {
+    display: inline-block;
+    padding: 3px 9px;
+    border-radius: 20px;
+    background: #fff1d5;
+    color: #7a570a;
+    font-size: 10px;
+    font-weight: 500;
+}
+
+.paciente-agenda-situacao[data-situacao="concluida"] {
+    background: #e5f3e7;
+    color: #21653d;
+}
+
+.paciente-agenda-situacao[data-situacao="cancelada"] {
+    background: #f0f0ee;
+    color: #65655d;
+}
+
+.paciente-agenda-vazio {
+    padding: 32px 15px;
+    border-radius: 12px;
+    background: #f8faf5;
+    text-align: center;
+}
+
+.paciente-agenda-vazio strong {
+    font-size: 13px;
+}
+
+.paciente-agenda-vazio p {
+    margin-top: 8px;
+    color: #617067;
+    font-size: 12px;
+}
+
+#paciente-agenda-acesso,
+#paciente-agenda-erro {
+    padding: 12px 14px;
+    border-radius: 9px;
+    background: #fff;
+}
+
+#paciente-agenda-erro {
+    border: 1px solid #e9bebb;
+    background: #fff0ee;
+    color: #8b252c;
+}
+
+@media (max-width: 700px) {
+    .paciente-agenda .panel {
+        padding: 19px;
+    }
+}
