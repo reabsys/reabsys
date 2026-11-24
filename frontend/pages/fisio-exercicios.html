@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../assets/images/logo/ReabSYS_iconeVerde.png">
+    <title>ReabSYS - Exercícios</title>
+
+    <link rel="stylesheet" href="../css/fisiomenu.css">
+    <link rel="stylesheet" href="../css/fisio-exercicios.css">
+    <script src="../js/menu-dados.js" defer></script>
+    <script src="../js/fisio-exercicios.js" defer></script>
+</head>
+
+<body>
+
+    <a class="fisio-exercicios-atalho" href="#fisio-exercicios-conteudo">Pular para o conteúdo</a>
+    <aside class="sidebar">
+        <div class="sidebar-top">
+            <div class="sidebar-logo">
+                <a href="../index.html">
+                    <img src="../assets/images/logo/ReabSYS_iconeBranco.png" alt="ReabSYS">
+                </a>
+            </div>
+
+            <nav class="sidebar-nav" aria-label="Menu do fisioterapeuta">
+                <a href="fisiomenu.html" class="nav-item">
+                    <i data-lucide="house"></i>
+                    <span>Início</span>
+                </a>
+
+                <a href="fisio-pacientes.html" class="nav-item">
+                    <i data-lucide="users"></i>
+                    <span>Pacientes</span>
+                </a>
+
+                <a href="fisio-agenda.html" class="nav-item">
+                    <i data-lucide="calendar-days"></i>
+                    <span>Agenda</span>
+                </a>
+
+                <a href="fisio-planos.html" class="nav-item">
+                    <i data-lucide="clipboard-list"></i>
+                    <span>Planos</span>
+                </a>
+
+                <a href="fisio-exercicios.html" class="nav-item active" aria-current="page">
+                    <i data-lucide="dumbbell"></i>
+                    <span>Exercícios</span>
+                </a>
+
+                <a href="fisio-evolucao.html" class="nav-item">
+                    <i data-lucide="chart-no-axes-combined"></i>
+                    <span>Evolução</span>
+                </a>
+            </nav>
+        </div>
+
+        <div class="sidebar-bottom">
+            <a href="fisio-perfil.html" class="nav-item">
+                <i data-lucide="circle-user-round"></i>
+                <span>Perfil</span>
+            </a>
+        </div>
+    </aside>
+
+    <noscript>Ative o JavaScript para utilizar as funcionalidades.</noscript>
+    <main class="main-content fisio-exercicios" id="fisio-exercicios-conteudo" hidden>
+        <header class="fisio-exercicios-cabecalho">
+            <div>
+                <p class="fisio-exercicios-chamada">Acompanhamento fisioterapêutico</p>
+                <h1>Exercícios</h1>
+                <p>Crie exercícios e monte uma seleção para cada paciente.</p>
+            </div>
+            <button type="button" id="fisio-exercicios-adicionar" aria-expanded="false"
+                aria-controls="fisio-exercicios-editor">Adicionar exercício</button>
+        </header>
+        <p id="fisio-exercicios-erro" role="alert" hidden></p>
+
+        <section class="panel" id="fisio-exercicios-editor" aria-labelledby="fisio-exercicios-titulo" hidden>
+            <h2 id="fisio-exercicios-titulo">Novo exercício</h2>
+            <form id="fisio-exercicios-form">
+                <label for="fisio-exercicios-nome">Nome *</label>
+                <input type="text" id="fisio-exercicios-nome" name="nome" minlength="3" maxlength="100" required>
+                <label for="fisio-exercicios-beneficio">O que ajuda ou melhora? *</label>
+                <textarea id="fisio-exercicios-beneficio" name="beneficio" minlength="3" maxlength="400" rows="3" required></textarea>
+                <label for="fisio-exercicios-url">URL da imagem</label>
+                <input type="url" id="fisio-exercicios-url" name="url" placeholder="https://..." aria-describedby="fisio-exercicios-ajuda">
+                <label for="fisio-exercicios-arquivo">Ou envie uma imagem</label>
+                <input type="file" id="fisio-exercicios-arquivo" name="arquivo" accept="image/png,image/jpeg,image/webp,image/gif"
+                    aria-describedby="fisio-exercicios-ajuda">
+                <small id="fisio-exercicios-ajuda">PNG, JPG, WebP ou GIF de até 5 MB. O upload substitui a URL e é reduzido para armazenamento local.</small>
+                <img id="fisio-exercicios-previa" alt="Prévia da imagem do exercício" hidden>
+                <p id="fisio-exercicios-erro-form" role="alert" hidden></p>
+                <div class="fisio-exercicios-botoes">
+                    <button type="submit" id="fisio-exercicios-salvar">Criar exercício</button>
+                    <button type="button" id="fisio-exercicios-cancelar" class="fisio-exercicios-secundario">Cancelar</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="panel" aria-labelledby="fisio-exercicios-titulo-paciente">
+            <h2 id="fisio-exercicios-titulo-paciente">Exercícios por paciente</h2>
+            <form id="fisio-exercicios-atribuicao">
+                <label for="fisio-exercicios-paciente">Paciente</label>
+                <select id="fisio-exercicios-paciente" required>
+                    <option value="">Selecione um paciente</option>
+                </select>
+                <p id="fisio-exercicios-selecao" role="status">Selecione um paciente para marcar os exercícios nos cards.</p>
+                <button type="submit" id="fisio-exercicios-atribuir" disabled>Salvar exercícios do paciente</button>
+            </form>
+        </section>
+
+        <section class="panel" aria-labelledby="fisio-exercicios-biblioteca">
+            <div class="fisio-exercicios-cabecalho">
+                <h2 id="fisio-exercicios-biblioteca">Biblioteca de exercícios</h2>
+                <span id="fisio-exercicios-contagem" role="status"></span>
+            </div>
+            <label for="fisio-exercicios-busca">Pesquisar exercícios</label>
+            <input type="search" id="fisio-exercicios-busca" placeholder="Nome ou benefício">
+            <div id="fisio-exercicios-vazio" hidden>
+                <strong>Nenhum exercício encontrado</strong>
+                <p>Ajuste a pesquisa ou crie um exercício.</p>
+            </div>
+            <div id="fisio-exercicios-lista"></div>
+
+            <details class="fisio-exercicios-creditos">
+                <summary>Créditos das imagens</summary>
+                <p>Fotografias convertidas para WebP e dimensionadas para os cartões.</p>
+                <ul>
+                    <li><a href="https://commons.wikimedia.org/wiki/File:Glute-bridge.png">Ponte glútea</a> — Marianne Gilbak,
+                        <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.</li>
+                    <li><a href="https://www.pexels.com/photo/woman-leaning-on-the-wall-with-a-ball-6740055/">Agachamento na parede</a> — Mikhail Nilov,
+                        <a href="https://www.pexels.com/license/">Licença Pexels</a>.</li>
+                    <li><a href="https://commons.wikimedia.org/wiki/File:Straight_Leg_Raise_Exercise.jpeg">Elevação de perna estendida</a> — Fruityfruit,
+                        <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>.</li>
+                    <li><a href="https://commons.wikimedia.org/wiki/File:Wshamstringstretch.jpg">Alongamento de isquiotibiais</a> — Richardkiwi, Wikipédia em neerlandês,
+                        <a href="https://creativecommons.org/licenses/by/2.5/nl/">CC BY 2.5 NL</a>.</li>
+                    <li><a href="https://commons.wikimedia.org/wiki/File:Plankphoto.JPG">Prancha abdominal</a> — Crossfit girl,
+                        <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>.</li>
+                    <li><a href="https://doi.org/10.3390/s150102181">Pêndulo de Codman</a> — Hsueh-Chun Lin, Shu-Yin Chiang,
+                        Kai Lee e Yao-Chiang Kan, <i>Sensors</i> (2015). Recorte do painel 2 da figura 2,
+                        <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</li>
+                </ul>
+            </details>
+        </section>
+        <p id="fisio-exercicios-aviso" role="status" hidden></p>
+    </main>
+    <p class="fisio-exercicios-falha" id="fisio-exercicios-falha" role="alert" hidden></p>
+
+    <template id="fisio-exercicios-modelo">
+        <article class="fisio-exercicios-cartao">
+            <div class="fisio-exercicios-midia">
+                <img loading="lazy" alt="">
+                <span hidden>Foto indisponível para este exercício</span>
+            </div>
+            <div class="fisio-exercicios-detalhes">
+                <h3></h3>
+                <p></p>
+                <label class="fisio-exercicios-marcar"><input type="checkbox"> Atribuir ao paciente</label>
+                <div class="fisio-exercicios-acoes" hidden>
+                    <button type="button" class="fisio-exercicios-secundario">Editar</button>
+                    <button type="button" class="fisio-exercicios-remover">Remover</button>
+                </div>
+            </div>
+        </article>
+    </template>
+    <script src="https://unpkg.com/lucide@latest" async onload="lucide.createIcons()"></script>
+</body>
+
+</html>

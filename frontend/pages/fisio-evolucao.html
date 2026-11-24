@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../assets/images/logo/ReabSYS_iconeVerde.png">
+    <title>ReabSYS - Evolução</title>
+
+    <link rel="stylesheet" href="../css/fisiomenu.css">
+    <link rel="stylesheet" href="../css/fisio-evolucao.css">
+    <script src="../js/menu-dados.js" defer></script>
+    <script src="../js/fisio-evolucao.js" defer></script>
+</head>
+
+<body>
+
+    <a class="fisio-evolucao-atalho" href="#fisio-evolucao-conteudo">Pular para o conteúdo</a>
+    <aside class="sidebar">
+        <div class="sidebar-top">
+            <div class="sidebar-logo">
+                <a href="../index.html">
+                    <img src="../assets/images/logo/ReabSYS_iconeBranco.png" alt="ReabSYS">
+                </a>
+            </div>
+
+            <nav class="sidebar-nav" aria-label="Menu do fisioterapeuta">
+                <a href="fisiomenu.html" class="nav-item">
+                    <i data-lucide="house"></i>
+                    <span>Início</span>
+                </a>
+
+                <a href="fisio-pacientes.html" class="nav-item">
+                    <i data-lucide="users"></i>
+                    <span>Pacientes</span>
+                </a>
+
+                <a href="fisio-agenda.html" class="nav-item">
+                    <i data-lucide="calendar-days"></i>
+                    <span>Agenda</span>
+                </a>
+
+                <a href="fisio-planos.html" class="nav-item">
+                    <i data-lucide="clipboard-list"></i>
+                    <span>Planos</span>
+                </a>
+
+                <a href="fisio-exercicios.html" class="nav-item">
+                    <i data-lucide="dumbbell"></i>
+                    <span>Exercícios</span>
+                </a>
+
+                <a href="fisio-evolucao.html" class="nav-item active" aria-current="page">
+                    <i data-lucide="chart-no-axes-combined"></i>
+                    <span>Evolução</span>
+                </a>
+            </nav>
+        </div>
+
+        <div class="sidebar-bottom">
+            <a href="fisio-perfil.html" class="nav-item">
+                <i data-lucide="circle-user-round"></i>
+                <span>Perfil</span>
+            </a>
+        </div>
+    </aside>
+
+    <noscript>Ative o JavaScript para utilizar as funcionalidades.</noscript>
+    <main class="main-content fisio-evolucao" id="fisio-evolucao-conteudo" hidden>
+        <header class="fisio-evolucao-cabecalho">
+            <p class="fisio-evolucao-chamada">Acompanhamento fisioterapêutico</p>
+            <h1>Evolução</h1>
+            <p>Acompanhe a dor registrada em cada exercício ao longo do tempo.</p>
+        </header>
+
+        <section class="panel fisio-evolucao-paciente" aria-label="Paciente em acompanhamento">
+            <div>
+                <label for="fisio-evolucao-paciente">Paciente</label>
+                <select id="fisio-evolucao-paciente">
+                    <option value="">Selecione um paciente</option>
+                </select>
+            </div>
+            <a id="fisio-evolucao-gerenciar" href="fisio-exercicios.html">Gerenciar exercícios</a>
+        </section>
+
+        <section class="panel" aria-label="Gráficos de dor">
+            <label for="fisio-evolucao-exercicio">Filtrar gráficos e histórico por exercício</label>
+            <select id="fisio-evolucao-exercicio" disabled>
+                <option value="">Todos os exercícios</option>
+            </select>
+            <div id="fisio-evolucao-graficos"></div>
+        </section>
+
+        <section class="panel" aria-labelledby="fisio-evolucao-titulo">
+            <div class="fisio-evolucao-resumo">
+                <h2 id="fisio-evolucao-titulo">Histórico de dor</h2>
+                <span id="fisio-evolucao-contagem" role="status"></span>
+            </div>
+            <p class="fisio-evolucao-ajuda">Os níveis de dor são registrados pelo paciente. Os anexos são identificados pelo nome.</p>
+            <p id="fisio-evolucao-vazio">Selecione um paciente para consultar os registros.</p>
+            <div id="fisio-evolucao-tabela" tabindex="0" role="region" aria-labelledby="fisio-evolucao-titulo" hidden>
+                <table>
+                    <caption>Registros de dor por data e exercício</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Data da sessão</th>
+                            <th scope="col">Exercício</th>
+                            <th scope="col">Dor (0–10)</th>
+                            <th scope="col">Observação</th>
+                            <th scope="col">Arquivos informados</th>
+                        </tr>
+                    </thead>
+                    <tbody id="fisio-evolucao-historico"></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+    <p id="fisio-evolucao-erro" role="alert" hidden>Não foi possível ler os dados de evolução neste navegador.</p>
+
+    <script src="https://unpkg.com/lucide@latest" async onload="lucide.createIcons()"></script>
+</body>
+
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../assets/images/logo/ReabSYS_iconeVerde.png">
+    <title>ReabSYS - Perfil</title>
+
+    <link rel="stylesheet" href="../css/fisiomenu.css">
+    <link rel="stylesheet" href="../css/fisio-perfil.css">
+    <script src="../js/menu-dados.js" defer></script>
+    <script src="../js/fisio-perfil.js" defer></script>
+</head>
+
+<body>
+
+    <a class="fisio-perfil-atalho" href="#fisio-perfil-conteudo">Pular para o conteúdo</a>
+    <aside class="sidebar">
+        <div class="sidebar-top">
+            <div class="sidebar-logo">
+                <a href="../index.html">
+                    <img src="../assets/images/logo/ReabSYS_iconeBranco.png" alt="ReabSYS">
+                </a>
+            </div>
+
+            <nav class="sidebar-nav" aria-label="Menu do fisioterapeuta">
+                <a href="fisiomenu.html" class="nav-item">
+                    <i data-lucide="house"></i>
+                    <span>Início</span>
+                </a>
+
+                <a href="fisio-pacientes.html" class="nav-item">
+                    <i data-lucide="users"></i>
+                    <span>Pacientes</span>
+                </a>
+
+                <a href="fisio-agenda.html" class="nav-item">
+                    <i data-lucide="calendar-days"></i>
+                    <span>Agenda</span>
+                </a>
+
+                <a href="fisio-planos.html" class="nav-item">
+                    <i data-lucide="clipboard-list"></i>
+                    <span>Planos</span>
+                </a>
+
+                <a href="fisio-exercicios.html" class="nav-item">
+                    <i data-lucide="dumbbell"></i>
+                    <span>Exercícios</span>
+                </a>
+
+                <a href="fisio-evolucao.html" class="nav-item">
+                    <i data-lucide="chart-no-axes-combined"></i>
+                    <span>Evolução</span>
+                </a>
+            </nav>
+        </div>
+
+        <div class="sidebar-bottom">
+            <a href="fisio-perfil.html" class="nav-item active" aria-current="page">
+                <i data-lucide="circle-user-round"></i>
+                <span>Perfil</span>
+            </a>
+        </div>
+    </aside>
+
+    <noscript>Ative o JavaScript para utilizar as funcionalidades.</noscript>
+    <main class="main-content fisio-perfil" id="fisio-perfil-conteudo" hidden>
+        <header class="fisio-perfil-cabecalho">
+            <p class="fisio-perfil-chamada">Acompanhamento fisioterapêutico</p>
+            <h1>Perfil</h1>
+            <p>Seus dados de apresentação neste navegador.</p>
+        </header>
+
+        <p id="fisio-perfil-erro" role="alert" hidden></p>
+        <section class="panel" aria-labelledby="fisio-perfil-titulo">
+            <h2 id="fisio-perfil-titulo">Dados do fisioterapeuta</h2>
+            <form id="fisio-perfil-form">
+                <label for="fisio-perfil-nome">Nome *</label>
+                <input type="text" id="fisio-perfil-nome" name="nome" minlength="3" maxlength="100" autocomplete="name" required>
+
+                <label for="fisio-perfil-email">E-mail *</label>
+                <input type="email" id="fisio-perfil-email" name="email" maxlength="120" autocomplete="email" required>
+
+                <label for="fisio-perfil-crefito">CREFITO</label>
+                <input type="text" id="fisio-perfil-crefito" name="crefito" maxlength="30">
+
+                <button type="submit">Salvar perfil</button>
+            </form>
+            <button type="button" id="fisio-perfil-sair">Sair</button>
+        </section>
+        <p id="fisio-perfil-aviso" role="status" hidden>Perfil atualizado.</p>
+    </main>
+
+    <script src="https://unpkg.com/lucide@latest" async onload="lucide.createIcons()"></script>
+</body>
+
+</html>

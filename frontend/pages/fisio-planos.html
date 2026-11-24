@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../assets/images/logo/ReabSYS_iconeVerde.png">
+    <title>ReabSYS - Planos</title>
+
+    <link rel="stylesheet" href="../css/fisiomenu.css">
+    <link rel="stylesheet" href="../css/fisio-planos.css">
+    <script src="../js/menu-dados.js" defer></script>
+    <script src="../js/fisio-planos.js" defer></script>
+</head>
+
+<body>
+
+    <a class="fisio-planos-atalho" href="#fisio-planos-conteudo">Pular para o conteúdo</a>
+    <aside class="sidebar">
+        <div class="sidebar-top">
+            <div class="sidebar-logo">
+                <a href="../index.html">
+                    <img src="../assets/images/logo/ReabSYS_iconeBranco.png" alt="ReabSYS">
+                </a>
+            </div>
+
+            <nav class="sidebar-nav" aria-label="Menu do fisioterapeuta">
+                <a href="fisiomenu.html" class="nav-item">
+                    <i data-lucide="house"></i>
+                    <span>Início</span>
+                </a>
+
+                <a href="fisio-pacientes.html" class="nav-item">
+                    <i data-lucide="users"></i>
+                    <span>Pacientes</span>
+                </a>
+
+                <a href="fisio-agenda.html" class="nav-item">
+                    <i data-lucide="calendar-days"></i>
+                    <span>Agenda</span>
+                </a>
+
+                <a href="fisio-planos.html" class="nav-item active" aria-current="page">
+                    <i data-lucide="clipboard-list"></i>
+                    <span>Planos</span>
+                </a>
+
+                <a href="fisio-exercicios.html" class="nav-item">
+                    <i data-lucide="dumbbell"></i>
+                    <span>Exercícios</span>
+                </a>
+
+                <a href="fisio-evolucao.html" class="nav-item">
+                    <i data-lucide="chart-no-axes-combined"></i>
+                    <span>Evolução</span>
+                </a>
+            </nav>
+        </div>
+
+        <div class="sidebar-bottom">
+            <a href="fisio-perfil.html" class="nav-item">
+                <i data-lucide="circle-user-round"></i>
+                <span>Perfil</span>
+            </a>
+        </div>
+    </aside>
+
+    <noscript>Ative o JavaScript para utilizar as funcionalidades.</noscript>
+    <main class="main-content fisio-planos" id="fisio-planos-conteudo" hidden>
+        <header class="fisio-planos-intro">
+            <h1>Um plano para cada etapa da sua jornada</h1>
+            <p><strong>Mais organização, mais acompanhamento e mais tempo para cuidar dos seus pacientes.</strong></p>
+            <p>
+                Escolha o plano que melhor se adapta à sua rotina profissional. Comece gratuitamente e amplie os
+                recursos conforme suas necessidades.
+            </p>
+        </header>
+
+        <p id="fisio-planos-confirmacao" role="status" hidden></p>
+
+        <div class="fisio-planos-opcoes">
+            <article class="panel fisio-planos-cartao">
+                <h2>GRATUITO</h2>
+                <p class="fisio-planos-preco">R$ 0/mês</p>
+                <h3>Comece a transformar o acompanhamento dos seus pacientes.</h3>
+                <p>
+                    Ideal para fisioterapeutas que estão começando e desejam experimentar os recursos essenciais
+                    do ReabSYS.
+                </p>
+                <ul>
+                    <li>Até 5 pacientes ativos</li>
+                    <li>Criação de planos de tratamento</li>
+                    <li>Prescrição de exercícios</li>
+                    <li>Registro de dor e evolução</li>
+                    <li>Envio de até 10 vídeos por mês</li>
+                </ul>
+                <button type="button" data-plano="Gratuito" aria-pressed="false">Começar gratuitamente</button>
+            </article>
+
+            <article class="panel fisio-planos-cartao fisio-planos-recomendado">
+                <span class="fisio-planos-etiqueta">Mais indicado</span>
+                <h2>PROFISSIONAL</h2>
+                <p class="fisio-planos-preco">R$ 39,90/mês</p>
+                <h3>Mais controle e praticidade para sua rotina.</h3>
+                <p>
+                    Ideal para fisioterapeutas que acompanham vários pacientes e buscam ferramentas mais completas
+                    de organização e monitoramento.
+                </p>
+                <ul>
+                    <li>Tudo do plano Gratuito</li>
+                    <li>Até 30 pacientes ativos</li>
+                    <li>Até 100 vídeos por mês</li>
+                    <li>Gráficos detalhados de evolução</li>
+                    <li>Relatórios de acompanhamento em PDF</li>
+                    <li>Histórico completo dos pacientes</li>
+                </ul>
+                <button type="button" data-plano="Profissional" aria-pressed="false">Escolher Profissional</button>
+            </article>
+
+            <article class="panel fisio-planos-cartao">
+                <h2>PREMIUM IA</h2>
+                <p class="fisio-planos-preco">R$ 89,90/mês</p>
+                <h3>Tecnologia inteligente para apoiar suas avaliações.</h3>
+                <p>
+                    A solução mais completa do ReabSYS, com recursos de inteligência artificial para auxiliar a
+                    análise de exercícios e o acompanhamento da evolução dos pacientes.
+                </p>
+                <ul>
+                    <li>Tudo do plano Profissional</li>
+                    <li>Até 100 pacientes ativos</li>
+                    <li>Até 300 vídeos por mês</li>
+                    <li>Até 50 análises assistidas por IA por mês</li>
+                    <li>Identificação estimada de pontos corporais e ângulos articulares</li>
+                    <li>Sinalização de possíveis desvios nos movimentos</li>
+                    <li>Visualização de resultados para revisão profissional</li>
+                </ul>
+                <button type="button" data-plano="Premium IA" aria-pressed="false">Conhecer o Premium</button>
+            </article>
+        </div>
+
+        <section class="panel fisio-planos-perguntas" aria-labelledby="fisio-planos-titulo-perguntas">
+            <h2 id="fisio-planos-titulo-perguntas">PERGUNTAS FREQUENTES</h2>
+            <details>
+                <summary>O paciente precisa pagar para utilizar o ReabSYS?</summary>
+                <p>
+                    Não. O acesso do paciente está vinculado ao fisioterapeuta responsável, sem cobrança de
+                    assinatura para o paciente.
+                </p>
+            </details>
+            <details>
+                <summary>Posso mudar de plano?</summary>
+                <p>A proposta permite ampliar o plano conforme a necessidade do profissional.</p>
+            </details>
+            <details>
+                <summary>A inteligência artificial substitui o fisioterapeuta?</summary>
+                <p>
+                    Não. A análise automatizada é um recurso complementar. A interpretação dos resultados e as
+                    decisões sobre o tratamento permanecem sob responsabilidade do profissional.
+                </p>
+            </details>
+        </section>
+        <p id="fisio-planos-aviso" aria-hidden="true" hidden></p>
+    </main>
+
+    <script src="https://unpkg.com/lucide@latest" async onload="lucide.createIcons()"></script>
+</body>
+
+</html>

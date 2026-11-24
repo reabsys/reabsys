@@ -1,0 +1,243 @@
+.fisio-exercicios-atalho {
+    position: fixed;
+    top: 8px;
+    left: 8px;
+    z-index: 101;
+    padding: 10px;
+    background: #fff;
+    color: #216747;
+    transform: translateY(-180%);
+}
+
+.fisio-exercicios-atalho:focus {
+    transform: translateY(0);
+}
+
+.fisio-exercicios-falha {
+    margin: 20px 20px 20px 75px;
+    color: #8b252c;
+}
+
+.fisio-exercicios {
+    max-width: 1800px;
+    padding-bottom: 30px;
+    color: #20382d;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.fisio-exercicios-cabecalho {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.fisio-exercicios-chamada {
+    color: #216747;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+}
+
+.fisio-exercicios .panel {
+    margin-bottom: 20px;
+    padding: 23px;
+    border: 1px solid #dde6d8;
+    border-radius: 16px;
+    box-shadow: 0 3px 12px #233a2410;
+}
+
+.fisio-exercicios .panel h2 {
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.fisio-exercicios form {
+    margin-top: 16px;
+}
+
+.fisio-exercicios label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.fisio-exercicios input:not([type="checkbox"]),
+.fisio-exercicios select,
+.fisio-exercicios textarea {
+    width: 100%;
+    min-height: 44px;
+    margin-bottom: 14px;
+    padding: 10px 12px;
+    border: 1px solid #c7d5c3;
+    border-radius: 8px;
+    background: #fff;
+    color: inherit;
+    font: inherit;
+}
+
+.fisio-exercicios textarea {
+    resize: vertical;
+}
+
+.fisio-exercicios small,
+#fisio-exercicios-selecao,
+#fisio-exercicios-contagem {
+    color: #617067;
+    font-size: 12px;
+}
+
+.fisio-exercicios small,
+#fisio-exercicios-selecao {
+    display: block;
+    margin-bottom: 15px;
+}
+
+.fisio-exercicios button {
+    min-height: 42px;
+    padding: 9px 16px;
+    border: 1px solid transparent;
+    border-radius: 9px;
+    background: #216747;
+    color: #fff;
+    font: inherit;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.fisio-exercicios .fisio-exercicios-secundario {
+    border-color: #ceddc8;
+    background: #f0f6ed;
+    color: #216747;
+}
+
+.fisio-exercicios .fisio-exercicios-remover {
+    border-color: #efd4d2;
+    background: #fff3f2;
+    color: #a62f35;
+}
+
+.fisio-exercicios button:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+
+.fisio-exercicios-botoes {
+    display: grid;
+    gap: 8px;
+}
+
+#fisio-exercicios-lista {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 230px), 1fr));
+    gap: 18px;
+}
+
+.fisio-exercicios-cartao,
+.fisio-exercicios-detalhes {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.fisio-exercicios-cartao {
+    overflow: hidden;
+    border: 1px solid #e1e9df;
+    border-radius: 12px;
+}
+
+.fisio-exercicios-detalhes {
+    flex: 1;
+    padding: 18px;
+    overflow-wrap: anywhere;
+}
+
+.fisio-exercicios-detalhes h3 {
+    font-size: 15px;
+}
+
+.fisio-exercicios-detalhes p {
+    flex: 1;
+    margin: 12px 0;
+    color: #617067;
+    font-size: 13px;
+}
+
+.fisio-exercicios-midia {
+    height: 180px;
+    display: grid;
+    place-items: center;
+    background: #f4f7f2;
+    text-align: center;
+}
+
+.fisio-exercicios-midia img,
+#fisio-exercicios-previa {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+}
+
+.fisio-exercicios .fisio-exercicios-marcar {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding: 8px 0;
+}
+
+.fisio-exercicios-marcar input {
+    width: 19px;
+    height: 19px;
+    accent-color: #216747;
+}
+
+.fisio-exercicios-acoes {
+    margin-top: 10px;
+}
+
+.fisio-exercicios-creditos {
+    margin-top: 16px;
+    font-size: 12px;
+}
+
+.fisio-exercicios-creditos summary {
+    color: #216747;
+    cursor: pointer;
+}
+
+.fisio-exercicios-creditos ul {
+    padding-left: 20px;
+}
+
+#fisio-exercicios-vazio {
+    padding: 24px;
+    background: #f8faf5;
+    text-align: center;
+}
+
+.fisio-exercicios [role="alert"] {
+    margin-bottom: 14px;
+    color: #8b252c;
+}
+
+#fisio-exercicios-aviso {
+    position: fixed;
+    right: 18px;
+    bottom: 18px;
+    max-width: calc(100% - 36px);
+    padding: 14px 18px;
+    border-radius: 12px;
+    background: #215638;
+    color: #fff;
+}
+
+@media (max-width: 700px) {
+    .fisio-exercicios .panel {
+        padding: 16px;
+    }
+}
