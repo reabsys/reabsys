@@ -139,6 +139,58 @@ button:hover {
     background-color: #26704f;
 }
 
+button:focus-visible {
+    outline: 2px solid #00843d;
+    outline-offset: 3px;
+}
+
+.abas {
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    margin-top: 14px;
+    margin-bottom: 16px;
+    background-color: transparent;
+}
+
+.abas .aba {
+    flex: 1;
+    min-width: 0;
+    width: auto;
+    height: auto;
+    margin-top: 0;
+    padding: 16px 12px;
+    position: relative;
+    z-index: 1;
+    border-radius: 20px 20px 0 0;
+    background-color: #61be94;
+    font-size: 15px;
+}
+
+.abas .aba + .aba {
+    margin-left: -12px;
+}
+
+.abas .aba.ativa {
+    z-index: 2;
+    padding: 26px 12px 20px;
+    border-bottom: 5px solid #00843d;
+    background-color: #349469;
+    font-size: 16px;
+    box-shadow: 0 -6px 14px rgba(0, 0, 0, 0.12);
+}
+
+.abas .aba:not(.ativa):hover {
+    background-color: #dcffef;
+    color: #00843d;
+}
+
+.formulario[hidden],
+.cadastro[hidden],
+.demo-aviso[hidden] {
+    display: none;
+}
+
 
 .cadastro {
     margin-top: 20px;
@@ -241,3 +293,22 @@ button:hover {
     color: #00843d;
 }
 
+@media (max-width: 420px) {
+    .login-section {
+        padding: 24px 16px;
+    }
+
+    .login-div {
+        padding: 26px 24px;
+    }
+
+    .abas .aba {
+        padding: 14px 8px;
+        font-size: 13px;
+    }
+
+    .abas .aba.ativa {
+        padding: 20px 8px 14px;
+        font-size: 13px;
+    }
+}

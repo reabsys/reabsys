@@ -25,7 +25,15 @@
 
                 <h1>Entrar</h1>
 
-                <form action="fisiomenu.html">
+                <div class="abas" role="tablist" aria-label="Perfil de acesso">
+                    <button type="button" id="login-aba-fisio" class="aba ativa" data-form="form-fisio"
+                        role="tab" aria-controls="form-fisio" aria-selected="true">Fisioterapeuta</button>
+                    <button type="button" id="login-aba-paciente" class="aba" data-form="form-paciente"
+                        role="tab" aria-controls="form-paciente" aria-selected="false" tabindex="-1">Paciente</button>
+                </div>
+
+                <form action="fisiomenu.html" id="form-fisio" class="formulario" role="tabpanel"
+                    aria-labelledby="login-aba-fisio">
 
                     <div class="campo">
                         <label for="CREFITO">CREFITO *</label>
@@ -37,6 +45,27 @@
                         <label for="senha">Senha *</label>
 
                         <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
+                    </div>
+
+                    <button type="submit">Entrar</button>
+
+                </form>
+
+                <form action="paciente-exercicios.html" id="form-paciente" class="formulario" role="tabpanel"
+                    aria-labelledby="login-aba-paciente" hidden>
+
+                    <div class="campo">
+                        <label for="login-paciente-email">E-mail *</label>
+
+                        <input type="email" id="login-paciente-email" name="login-paciente-email"
+                            placeholder="Digite seu e-mail" maxlength="120" autocomplete="username" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="login-paciente-senha">Senha *</label>
+
+                        <input type="password" id="login-paciente-senha" name="login-paciente-senha"
+                            placeholder="Digite sua senha" autocomplete="current-password" required>
                     </div>
 
                     <button type="submit">Entrar</button>
@@ -59,6 +88,7 @@
         </section>
     </main>
 
+    <script src="../js/menu-dados.js"></script>
     <script src="../js/login.js"></script>
 </body>
 
