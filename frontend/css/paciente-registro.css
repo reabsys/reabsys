@@ -1,0 +1,171 @@
+.paciente-registro {
+    max-width: 1800px;
+    padding-bottom: 30px;
+    color: #20382d;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.paciente-registro-atalho {
+    position: fixed;
+    top: 8px;
+    left: 8px;
+    z-index: 101;
+    padding: 10px;
+    background: #fff;
+    color: #216747;
+    transform: translateY(-180%);
+}
+
+.paciente-registro-atalho:focus {
+    transform: translateY(0);
+}
+
+.paciente-registro-cabecalho {
+    margin-bottom: 22px;
+}
+
+.paciente-registro-cabecalho h1 {
+    margin-bottom: 8px;
+    font-size: clamp(25px, 3vw, 32px);
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.paciente-registro-chamada {
+    margin-bottom: 8px;
+    color: #216747;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+    overflow-wrap: anywhere;
+}
+
+.paciente-registro .panel {
+    max-width: 620px;
+    padding: 23px;
+    border: 1px solid #dde6d8;
+    border-radius: 16px;
+    box-shadow: 0 3px 12px #233a2410;
+}
+
+.paciente-registro .panel h2 {
+    margin-bottom: 12px;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+#paciente-registro-campos {
+    min-width: 0;
+    border: 0;
+}
+
+.paciente-registro label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.paciente-registro input,
+.paciente-registro select,
+.paciente-registro textarea {
+    width: 100%;
+    min-width: 0;
+    min-height: 44px;
+    margin-bottom: 16px;
+    padding: 10px 12px;
+    border: 1px solid #c7d5c3;
+    border-radius: 8px;
+    background: #fff;
+    color: inherit;
+    font: inherit;
+    font-size: 13px;
+}
+
+.paciente-registro textarea {
+    resize: vertical;
+}
+
+.paciente-registro small,
+#paciente-registro-orientacao {
+    display: block;
+    margin-bottom: 16px;
+    color: #617067;
+    font-size: 12px;
+}
+
+.paciente-registro input[aria-describedby] {
+    margin-bottom: 4px;
+}
+
+.paciente-registro button {
+    min-height: 44px;
+    padding: 10px 18px;
+    border: 1px solid transparent;
+    border-radius: 9px;
+    background: #216747;
+    color: #fff;
+    font: inherit;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.paciente-registro button:hover {
+    background: #174d34;
+}
+
+.paciente-registro button:disabled,
+#paciente-registro-campos:disabled button {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+
+.paciente-registro :focus-visible {
+    outline: 3px solid #946500;
+    outline-offset: 3px;
+}
+
+#paciente-registro-erro,
+#paciente-registro-falha,
+#paciente-registro-acesso {
+    max-width: 620px;
+    margin-bottom: 16px;
+    padding: 12px 14px;
+    border-radius: 9px;
+    background: #fff;
+}
+
+#paciente-registro-erro,
+#paciente-registro-falha {
+    border: 1px solid #e9bebb;
+    background: #fff0ee;
+    color: #8b252c;
+    font-size: 12px;
+}
+
+#paciente-registro-aviso {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    max-width: min(430px, calc(100% - 48px));
+    padding: 15px 20px;
+    border-radius: 12px;
+    background: #215638;
+    color: #fff;
+    font-size: 13px;
+}
+
+@media (max-width: 700px) {
+    .paciente-registro .panel {
+        padding: 19px;
+    }
+
+    #paciente-registro-aviso {
+        left: 70px;
+        right: 15px;
+        max-width: none;
+    }
+}

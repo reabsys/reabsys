@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../assets/images/logo/ReabSYS_iconeVerde.png">
+    <title>ReabSYS - Agenda do paciente</title>
+
+    <link rel="stylesheet" href="../css/fisiomenu.css">
+    <link rel="stylesheet" href="../css/paciente-agenda.css">
+    <script src="../js/menu-dados.js" defer></script>
+    <script src="../js/paciente-dados.js" defer></script>
+    <script src="../js/paciente-agenda.js" defer></script>
+</head>
+
+<body>
+
+    <a class="paciente-agenda-atalho" href="#paciente-agenda-conteudo">Pular para o conteúdo</a>
+    <aside class="sidebar">
+        <div class="sidebar-top">
+            <div class="sidebar-logo">
+                <a href="paciente-exercicios.html">
+                    <img src="../assets/images/logo/ReabSYS_iconeBranco.png" alt="ReabSYS">
+                </a>
+            </div>
+
+            <nav class="sidebar-nav" aria-label="Menu do paciente">
+                <a href="paciente-exercicios.html" class="nav-item">
+                    <i data-lucide="dumbbell"></i>
+                    <span>Meus exercícios</span>
+                </a>
+
+                <a href="paciente-registro.html" class="nav-item">
+                    <i data-lucide="clipboard-list"></i>
+                    <span>Enviar registro</span>
+                </a>
+
+                <a href="paciente-agenda.html" class="nav-item active" aria-current="page">
+                    <i data-lucide="calendar-days"></i>
+                    <span>Agenda</span>
+                </a>
+
+                <a href="paciente-evolucao.html" class="nav-item">
+                    <i data-lucide="chart-no-axes-combined"></i>
+                    <span>Minha evolução</span>
+                </a>
+            </nav>
+        </div>
+
+        <div class="sidebar-bottom">
+            <a href="paciente-perfil.html" class="nav-item">
+                <i data-lucide="circle-user-round"></i>
+                <span>Perfil</span>
+            </a>
+        </div>
+    </aside>
+
+    <main class="main-content paciente-agenda" id="paciente-agenda-conteudo">
+        <header class="paciente-agenda-cabecalho">
+            <p class="paciente-agenda-chamada" id="paciente-agenda-saudacao">Área do paciente</p>
+            <h1>Agenda</h1>
+            <p>Consulte as sessões organizadas pelo seu fisioterapeuta.</p>
+        </header>
+
+        <noscript>Ative o JavaScript para utilizar as funcionalidades.</noscript>
+        <p id="paciente-agenda-acesso" role="status" hidden>Acesse como paciente para consultar sua agenda.</p>
+        <p id="paciente-agenda-erro" role="alert" hidden>Não foi possível ler sua agenda neste navegador.</p>
+
+        <div id="paciente-agenda-painel" hidden>
+            <section class="panel" aria-labelledby="paciente-agenda-proximas-titulo">
+                <h2 id="paciente-agenda-proximas-titulo">Próximas consultas</h2>
+                <div id="paciente-agenda-proximas" class="paciente-agenda-lista"></div>
+                <div class="paciente-agenda-vazio" id="paciente-agenda-proximas-vazio">
+                    <strong>Nenhuma consulta nesta lista</strong>
+                    <p>As próximas consultas agendadas aparecerão aqui.</p>
+                </div>
+            </section>
+
+            <section class="panel" aria-labelledby="paciente-agenda-passadas-titulo">
+                <h2 id="paciente-agenda-passadas-titulo">Consultas passadas</h2>
+                <div id="paciente-agenda-passadas" class="paciente-agenda-lista"></div>
+                <div class="paciente-agenda-vazio" id="paciente-agenda-passadas-vazio">
+                    <strong>Nenhuma consulta nesta lista</strong>
+                    <p>As consultas serão organizadas nesta seção.</p>
+                </div>
+            </section>
+
+            <section class="panel" aria-labelledby="paciente-agenda-canceladas-titulo">
+                <h2 id="paciente-agenda-canceladas-titulo">Consultas canceladas</h2>
+                <div id="paciente-agenda-canceladas" class="paciente-agenda-lista"></div>
+                <div class="paciente-agenda-vazio" id="paciente-agenda-canceladas-vazio">
+                    <strong>Nenhuma consulta nesta lista</strong>
+                    <p>As consultas serão organizadas nesta seção.</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <template id="paciente-agenda-modelo">
+        <article class="paciente-agenda-consulta">
+            <h3></h3>
+            <p class="paciente-agenda-detalhes"></p>
+            <p class="paciente-agenda-orientacao">Local e orientações: confirme com seu fisioterapeuta.</p>
+            <span class="paciente-agenda-situacao"></span>
+        </article>
+    </template>
+    <script src="https://unpkg.com/lucide@latest" async onload="lucide.createIcons()"></script>
+</body>
+
+</html>

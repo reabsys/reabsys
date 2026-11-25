@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../assets/images/logo/ReabSYS_iconeVerde.png">
+    <title>ReabSYS - Perfil do paciente</title>
+
+    <link rel="stylesheet" href="../css/fisiomenu.css">
+    <link rel="stylesheet" href="../css/paciente-perfil.css">
+    <script src="../js/menu-dados.js" defer></script>
+    <script src="../js/paciente-dados.js" defer></script>
+    <script src="../js/paciente-perfil.js" defer></script>
+</head>
+
+<body>
+
+    <a class="paciente-perfil-atalho" href="#paciente-perfil-conteudo">Pular para o conteúdo</a>
+    <aside class="sidebar">
+        <div class="sidebar-top">
+            <div class="sidebar-logo">
+                <a href="paciente-exercicios.html">
+                    <img src="../assets/images/logo/ReabSYS_iconeBranco.png" alt="ReabSYS">
+                </a>
+            </div>
+
+            <nav class="sidebar-nav" aria-label="Menu do paciente">
+                <a href="paciente-exercicios.html" class="nav-item">
+                    <i data-lucide="dumbbell"></i>
+                    <span>Meus exercícios</span>
+                </a>
+
+                <a href="paciente-registro.html" class="nav-item">
+                    <i data-lucide="clipboard-list"></i>
+                    <span>Enviar registro</span>
+                </a>
+
+                <a href="paciente-agenda.html" class="nav-item">
+                    <i data-lucide="calendar-days"></i>
+                    <span>Agenda</span>
+                </a>
+
+                <a href="paciente-evolucao.html" class="nav-item">
+                    <i data-lucide="chart-no-axes-combined"></i>
+                    <span>Minha evolução</span>
+                </a>
+            </nav>
+        </div>
+
+        <div class="sidebar-bottom">
+            <a href="paciente-perfil.html" class="nav-item active" aria-current="page">
+                <i data-lucide="circle-user-round"></i>
+                <span>Perfil</span>
+            </a>
+        </div>
+    </aside>
+
+    <main class="main-content paciente-perfil" id="paciente-perfil-conteudo">
+        <header class="paciente-perfil-cabecalho">
+            <p class="paciente-perfil-chamada" id="paciente-perfil-saudacao">Área do paciente</p>
+            <h1>Perfil</h1>
+            <p>Seus dados de acompanhamento.</p>
+        </header>
+
+        <noscript>Ative o JavaScript para utilizar as funcionalidades.</noscript>
+        <p id="paciente-perfil-acesso" role="status" hidden>Acesse como paciente para consultar seu perfil.</p>
+        <p id="paciente-perfil-erro" role="alert" hidden></p>
+
+        <section class="panel" id="paciente-perfil-painel" aria-labelledby="paciente-perfil-nome" hidden>
+            <h2 id="paciente-perfil-nome"></h2>
+            <p id="paciente-perfil-email"></p>
+            <p id="paciente-perfil-acompanhamento"></p>
+            <button type="button" id="paciente-perfil-sair">Sair</button>
+        </section>
+    </main>
+
+    <script src="https://unpkg.com/lucide@latest" async onload="lucide.createIcons()"></script>
+</body>
+
+</html>
